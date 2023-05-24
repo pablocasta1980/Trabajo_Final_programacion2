@@ -9,4 +9,10 @@ public class Cliente extends Persona  {
 		System.out.println("Acepteme los cambios");
 	}
 
+	@Override
+	public void registrarEmpleado() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
