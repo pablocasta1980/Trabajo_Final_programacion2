@@ -16,6 +16,10 @@ public abstract class Persona {
         this.contrasena = contrasena;
     }
     
+    public abstract void registrarEmpleado ();
+        // Lógica para registrar un nuevo empleado en el sistema    
+    	
+    
     public String toString() {
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
