@@ -13,6 +13,8 @@ public class Principal {
 		
 		a1.registrarEmpleado();
 		
+		a1.registrarEmpleado();
+		
 			
 	}
 
