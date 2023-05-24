@@ -10,11 +10,15 @@ public class Administrador extends Persona {
 
     // Funcionalidades adicionales del administrador
 
+    @Override
+    
     public void registrarEmpleado () {
         // Lógica para registrar un nuevo empleado en el sistema    
     	
     	System.out.println("bien");
     }
+    
+    
 
     public void actualizarEmpleado(Empleado empleado) {
         // Lógica para gestionar los datos de un empleado existente (actualizar datos)
