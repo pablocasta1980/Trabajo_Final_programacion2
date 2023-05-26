@@ -42,11 +42,166 @@ public abstract class Vehiculo {
 		this.tipoCombustible = tipoCombustible;
 		this.tipoTransmision = tipoTransmision;
 		
+		
 	}
 	
 	
 	
 	
 	public abstract String toString ();
+
+
+
+
+	public String getMarca() {
+		return marca;
+	}
+
+
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+
+
+	public String getModelo() {
+		return modelo;
+	}
+
+
+
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+
+
+
+	public int getCambios() {
+		return cambios;
+	}
+
+
+
+
+	public void setCambios(int cambios) {
+		this.cambios = cambios;
+	}
+
+
+
+
+	public int getVelocidadMaxima() {
+		return velocidadMaxima;
+	}
+
+
+
+
+	public void setVelocidadMaxima(int velocidadMaxima) {
+		this.velocidadMaxima = velocidadMaxima;
+	}
+
+
+
+
+	public int getCilindraje() {
+		return cilindraje;
+	}
+
+
+
+
+	public void setCilindraje(int cilindraje) {
+		this.cilindraje = cilindraje;
+	}
+
+
+
+
+	public String getPlaca() {
+		return placa;
+	}
+
+
+
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+
+
+
+
+	public String getFotografias() {
+		return fotografias;
+	}
+
+
+
+
+	public void setFotografias(String fotografias) {
+		this.fotografias = fotografias;
+	}
+
+
+
+
+	public estado getTipoEstado() {
+		return tipoEstado;
+	}
+
+
+
+
+	public void setTipoEstado(estado tipoEstado) {
+		this.tipoEstado = tipoEstado;
+	}
+
+
+
+
+	public abs getTipoAbs() {
+		return tipoAbs;
+	}
+
+
+
+
+	public void setTipoAbs(abs tipoAbs) {
+		this.tipoAbs = tipoAbs;
+	}
+
+
+
+
+	public combustible getTipoCombustible() {
+		return tipoCombustible;
+	}
+
+
+
+
+	public void setTipoCombustible(combustible tipoCombustible) {
+		this.tipoCombustible = tipoCombustible;
+	}
+
+
+
+
+	public transmision getTipoTransmision() {
+		return tipoTransmision;
+	}
+
+
+
+
+	public void setTipoTransmision(transmision tipoTransmision) {
+		this.tipoTransmision = tipoTransmision;
+	}
 
 }
