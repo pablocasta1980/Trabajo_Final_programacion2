@@ -8,12 +8,22 @@ public abstract class Vehiculo {
 	private int cambios;
 	private int velocidadMaxima;
 	private int cilindraje;
-	private String placas;
+	private String placa;
 	private String fotografias;
+	
 	public enum estado {NUEVO, USADO};
+	private estado tipoEstado;
+	
+	
 	public enum abs {SI, NO};
+	private abs tipoAbs;
+	
+	
 	public enum combustible {GASOLINA, DIESEL, ELECTRICO, HIBRIDO};
+	private combustible tipoCombustible;
+	
 	public enum transmision {AUTOMATICA, MANUAL};
+	private transmision tipoTransmision;
 	
 	
 	public Vehiculo(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje,
@@ -27,6 +37,11 @@ public abstract class Vehiculo {
 		this.cilindraje = cilindraje;
 		this.placa = placa;
 		this.fotografias = fotografias;
+		this.tipoEstado = tipoEstado;
+		this.tipoAbs = tipoAbs;
+		this.tipoCombustible = tipoCombustible;
+		this.tipoTransmision = tipoTransmision;
+		
 	}
 	
 	

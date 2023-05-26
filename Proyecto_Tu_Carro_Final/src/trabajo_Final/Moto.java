@@ -1,9 +1,16 @@
 package trabajo_Final;
 
 public class Moto extends Vehiculo {
+	
+	
+	
+	
 
-	public Moto(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String fotografias) {
-		super(marca, modelo, cambios, velocidadMaxima, cilindraje, fotografias);
+	public Moto(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
+			String fotografias, estado tipoEstado, abs tipoAbs, combustible tipoCombustible,
+			transmision tipoTransmision) {
+		super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado, tipoAbs, tipoCombustible,
+				tipoTransmision);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -12,6 +19,8 @@ public class Moto extends Vehiculo {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 	
 
