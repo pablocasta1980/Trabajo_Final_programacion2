@@ -27,8 +27,8 @@ public abstract class Automovil extends Vehiculo {
 			transmision tipoTransmision, int numeroPasajeros, int numeroPuertas, int numeroBolsas,
 			camara tieneCamara, sensorColision tieneSensorCol, sensorTrafico tieneSensorTraf, 
 			asistentePermanencia tieneAsistentePerma, aireAcondicionado tieneAireAcond) {
-		super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado, tipoAbs, tipoCombustible,
-				tipoTransmision);
+		super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, 
+				tipoEstado, tipoAbs, tipoCombustible,tipoTransmision);
 		// TODO Auto-generated constructor stub
 	
 		this.numeroPasajeros = numeroPasajeros;
