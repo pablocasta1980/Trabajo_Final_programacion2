@@ -78,6 +78,7 @@ public class Login extends JFrame {
 		
 		btnIngresar = new JButton("Ingresar");
 		btnIngresar.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				char [] clave = jpassClave.getPassword();
 				String claveFinal = new String (clave);
