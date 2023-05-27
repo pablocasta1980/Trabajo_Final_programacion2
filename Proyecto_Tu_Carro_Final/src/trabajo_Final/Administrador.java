@@ -9,7 +9,6 @@ public class Administrador extends Persona {
     }
 
     // Funcionalidades adicionales del administrador
-    
 
     @Override
     
