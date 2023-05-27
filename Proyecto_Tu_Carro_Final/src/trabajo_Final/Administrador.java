@@ -16,7 +16,6 @@ public class Administrador extends Persona {
     public void registrarEmpleado () {
         // Lógica para registrar un nuevo empleado en el sistema    
     	
-    	
     	System.out.println("bien");
     }
     
