@@ -1,5 +1,7 @@
 package trabajo_Final;
 
+
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -7,14 +9,11 @@ public class Principal {
 		
 		
 		
-		Persona a1 = new Administrador("pablo","Castaño",18469174,"email","abcd");
-		Persona e1 = new Empleado("pedro","Castro",25025184,"email1","edfr");
+		System.out.println("hola");
 		
-		a1.registrarEmpleado();
-		a1.registrarEmpleado();
-		a1.registrarEmpleado();
-		a1.registrarEmpleado();
 		
+		
+	
 		
 			
 	}
