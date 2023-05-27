@@ -90,6 +90,10 @@ public class Login extends JFrame {
 					p.setVisible(true);					
 				}else {
 					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta", "ERROR", JOptionPane.ERROR_MESSAGE);
+					
+					txtUsuario.setText("");
+					jpassClave.setText("");
+					txtUsuario.requestFocus();
 				}
 			}
 		});
