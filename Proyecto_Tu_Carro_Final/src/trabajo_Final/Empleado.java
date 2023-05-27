@@ -45,5 +45,11 @@ public class Empleado extends Persona {
     public List<Reporte> getReportes() {
         return reportes;
     }
+
+	@Override
+	public void registrarEmpleado() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
