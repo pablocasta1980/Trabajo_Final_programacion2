@@ -65,8 +65,10 @@ public class Seleccionar_Perfil extends JFrame {
 		rdbtnNewRadioButton_2.setBounds(22, 120, 109, 23);
 		contentPane.add(rdbtnNewRadioButton_2);
 		
+		
 		bg.add(rdbtnNewRadioButton);
 		bg.add(rdbtnNewRadioButton_1);
+		bg.add(rdbtnNewRadioButton_2);
 		
 		JButton btnPerfil= new JButton("INGRESAR");
 		btnPerfil.setBounds(169, 165, 123, 23);
