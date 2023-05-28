@@ -1,6 +1,8 @@
 package vista;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
-
+import trabajo_Final.Combustible;
 public class VistaMoto extends JFrame {
 
 	private JPanel contentPane;
@@ -73,7 +75,7 @@ public class VistaMoto extends JFrame {
 		
 		JLabel lblCombustible = new JLabel("COMBUSTIBLE");
 		lblCombustible.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCombustible.setBounds(260, 69, 97, 14);
+		lblCombustible.setBounds(216, 69, 97, 14);
 		contentPane.add(lblCombustible);
 		
 		JLabel lblCilindraje = new JLabel("CILINDRAJE:");
@@ -107,9 +109,10 @@ public class VistaMoto extends JFrame {
 		contentPane.add(txtCilindraje);
 		
 		cbCombustible = new JComboBox();
-		cbCombustible.setBounds(367, 65, 30, 22);
+		cbCombustible.setBounds(323, 65, 101, 22);
 		contentPane.add(cbCombustible);
 		
+				
 		lblVelocidadMax_1 = new JLabel("VELOCIDAD MAX:");
 		lblVelocidadMax_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblVelocidadMax_1.setBounds(13, 199, 97, 14);
@@ -127,7 +130,7 @@ public class VistaMoto extends JFrame {
 		
 		lblTransmision = new JLabel("TRANSMISION");
 		lblTransmision.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblTransmision.setBounds(258, 30, 97, 14);
+		lblTransmision.setBounds(216, 27, 97, 14);
 		contentPane.add(lblTransmision);
 		
 		cbEstado = new JComboBox();
@@ -139,7 +142,7 @@ public class VistaMoto extends JFrame {
 		contentPane.add(cbAbs);
 		
 		cbTransmision = new JComboBox();
-		cbTransmision.setBounds(367, 23, 30, 22);
+		cbTransmision.setBounds(323, 23, 101, 22);
 		contentPane.add(cbTransmision);
 	}
 }
