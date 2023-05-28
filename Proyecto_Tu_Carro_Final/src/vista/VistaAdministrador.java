@@ -8,6 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VistaAdministrador extends JFrame {
 
@@ -34,7 +36,7 @@ public class VistaAdministrador extends JFrame {
 	 */
 	public VistaAdministrador() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 448, 251);
 		setTitle("PERFIL ADMINISTRADOR");
 	
 		
@@ -46,16 +48,43 @@ public class VistaAdministrador extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("INGRESAR EMPLEADO");
-		btnNewButton.setBounds(10, 23, 158, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(229, 23, 158, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("CONSULTAR EMPLEADO");
-		btnNewButton_1.setBounds(10, 81, 158, 23);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_1.setBounds(32, 23, 158, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("GENERAR REPORTE");
-		btnNewButton_2.setBounds(10, 144, 158, 23);
+		btnNewButton_2.setBounds(229, 159, 158, 23);
 		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("ACTUALIZAR EMPLEADO");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_3.setBounds(32, 92, 158, 23);
+		contentPane.add(btnNewButton_3);
+		
+		JButton btnNewButton_3_1 = new JButton("BLOQUEAR EMPLEADO");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_3_1.setBounds(229, 92, 158, 23);
+		contentPane.add(btnNewButton_3_1);
+		
+		JButton btnNewButton_3_1_1 = new JButton("ELIMINAR EMPLEADO");
+		btnNewButton_3_1_1.setBounds(32, 159, 158, 23);
+		contentPane.add(btnNewButton_3_1_1);
 	}
-
 }
