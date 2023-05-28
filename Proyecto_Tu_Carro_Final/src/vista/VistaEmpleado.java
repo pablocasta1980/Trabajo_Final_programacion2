@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VistaEmpleado extends JFrame {
 
@@ -41,20 +43,24 @@ public class VistaEmpleado extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(49, 31, 138, 23);
+		JButton btnNewButton = new JButton("REGISTRAR CLIENTE");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(49, 31, 156, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(242, 31, 138, 23);
+		JButton btnNewButton_1 = new JButton("ALQUILAR VEHICULO");
+		btnNewButton_1.setBounds(242, 31, 156, 23);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_1_1 = new JButton("New button");
-		btnNewButton_1_1.setBounds(49, 109, 138, 23);
+		JButton btnNewButton_1_1 = new JButton("VENDER VEHICULO");
+		btnNewButton_1_1.setBounds(49, 109, 156, 23);
 		contentPane.add(btnNewButton_1_1);
 		
-		JButton btnNewButton_1_1_1 = new JButton("New button");
-		btnNewButton_1_1_1.setBounds(242, 109, 138, 23);
+		JButton btnNewButton_1_1_1 = new JButton("COMPRAR VEHICULO");
+		btnNewButton_1_1_1.setBounds(242, 109, 156, 23);
 		contentPane.add(btnNewButton_1_1_1);
 	}
 

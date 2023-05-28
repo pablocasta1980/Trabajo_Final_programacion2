@@ -95,8 +95,22 @@ public class Login extends JFrame {
 
 					VistaAdministrador p = new VistaAdministrador();
 
-					p.setVisible(true);					
-				}else {
+					p.setVisible(true);	
+					
+					
+				}else  if(txtUsuario.getText().equals("User")&& claveFinal.equals("12345")) {
+					dispose();
+					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", 
+					JOptionPane.INFORMATION_MESSAGE);
+					
+
+					VistaEmpleado p = new VistaEmpleado();
+
+					p.setVisible(true);	
+				}
+				
+				
+				else {
 					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta", "ERROR", JOptionPane.ERROR_MESSAGE);
 					
 					txtUsuario.setText("");
