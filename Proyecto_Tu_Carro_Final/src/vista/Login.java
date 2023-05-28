@@ -45,13 +45,17 @@ public class Login extends JFrame {
 	public Login() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 417, 194);
+
+		setTitle("CONCESIONARIO TU CARRO");
+
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("LOGIN");
+
+		JLabel lblNewLabel = new JLabel("Digite Usuario");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(155, 0, 85, 32);
@@ -87,7 +91,9 @@ public class Login extends JFrame {
 					dispose();
 					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", JOptionPane.INFORMATION_MESSAGE);
 					
-					VistaPrincipal p = new VistaPrincipal();
+
+					VistaAdministrador p = new VistaAdministrador();
+
 					p.setVisible(true);					
 				}else {
 					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta", "ERROR", JOptionPane.ERROR_MESSAGE);
