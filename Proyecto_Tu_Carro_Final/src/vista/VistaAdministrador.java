@@ -50,6 +50,11 @@ public class VistaAdministrador extends JFrame {
 		JButton btnNewButton = new JButton("INGRESAR EMPLEADO");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				VistaCamposEmpleado campos = new VistaCamposEmpleado();
+				campos.setVisible(true);
+				
 			}
 		});
 		btnNewButton.setBounds(229, 23, 158, 23);
@@ -58,8 +63,18 @@ public class VistaAdministrador extends JFrame {
 		JButton btnNewButton_1 = new JButton("CONSULTAR EMPLEADO");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				VistaConsultarEmpleado c = new VistaConsultarEmpleado();
+				c.setVisible(true);
+				
+				
+				
 			}
 		});
+		
+		
+		
 		btnNewButton_1.setBounds(32, 23, 158, 23);
 		contentPane.add(btnNewButton_1);
 		
