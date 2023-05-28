@@ -89,7 +89,8 @@ public class Login extends JFrame {
 				
 				if(txtUsuario.getText().equals("Admin")&& claveFinal.equals("12345")) {
 					dispose();
-					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", 
+					JOptionPane.INFORMATION_MESSAGE);
 					
 
 					VistaAdministrador p = new VistaAdministrador();
