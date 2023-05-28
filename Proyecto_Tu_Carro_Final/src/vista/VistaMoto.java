@@ -118,7 +118,7 @@ public class VistaMoto extends JFrame {
 		
 		lblEstado = new JLabel("ESTADO");
 		lblEstado.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblEstado.setBounds(260, 112, 97, 14);
+		lblEstado.setBounds(216, 112, 97, 14);
 		contentPane.add(lblEstado);
 		
 		lblAbs = new JLabel("ABS");
@@ -140,7 +140,7 @@ public class VistaMoto extends JFrame {
 		EstadoVehiculo [] estados = EstadoVehiculo.values();
 		DefaultComboBoxModel<EstadoVehiculo> comboBoxModel2 = new DefaultComboBoxModel<>(estados);
 		cbEstado = new JComboBox<>(comboBoxModel2);
-		cbEstado.setBounds(367, 109, 30, 22);
+		cbEstado.setBounds(323, 109, 101, 22);
 		contentPane.add(cbEstado);
 		
 		cbAbs = new JComboBox();

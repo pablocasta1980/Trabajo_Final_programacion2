@@ -1,6 +1,5 @@
 package trabajo_Final;
 
 public enum Combustible {
-
-	SELECCIONE, GASOLINA, DIESEL, ELECTRICO, HIBRIDO
+	Seleccione,	GASOLINA, DIESEL, ELECTRICO, HIBRIDO
 }
