@@ -97,6 +97,7 @@ public class Login extends JFrame {
 					jpassClave.setText("");
 					txtUsuario.requestFocus();
 				}
+				
 			}
 		});
 		btnIngresar.setFont(new Font("Tahoma", Font.BOLD, 11));
