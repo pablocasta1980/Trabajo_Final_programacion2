@@ -81,6 +81,7 @@ public class Seleccionar_Perfil extends JFrame {
 				if(rdbtnNewRadioButton.isSelected()) {
 					dispose();
 					Login admin1 = new Login();
+					
 					admin1.setVisible(true);					
 				}
 				
