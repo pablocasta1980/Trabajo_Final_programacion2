@@ -9,8 +9,7 @@ public class Principal {
 		
 		
 		
-		System.out.println("hola");
-		
+		System.out.println("hola");		
 		
 		
 	
