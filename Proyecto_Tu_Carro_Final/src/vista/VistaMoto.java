@@ -1,5 +1,6 @@
 package vista;
 
+import javax.swing.DefaultComboBoxModel;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +13,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import trabajo_Final.Combustible;
+import trabajo_Final.EstadoVehiculo;
 public class VistaMoto extends JFrame {
 
 	private JPanel contentPane;
@@ -108,11 +110,7 @@ public class VistaMoto extends JFrame {
 		txtCilindraje.setBounds(120, 156, 86, 20);
 		contentPane.add(txtCilindraje);
 		
-		cbCombustible = new JComboBox();
-		cbCombustible.setBounds(323, 65, 101, 22);
-		contentPane.add(cbCombustible);
 		
-				
 		lblVelocidadMax_1 = new JLabel("VELOCIDAD MAX:");
 		lblVelocidadMax_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblVelocidadMax_1.setBounds(13, 199, 97, 14);
@@ -133,7 +131,15 @@ public class VistaMoto extends JFrame {
 		lblTransmision.setBounds(216, 27, 97, 14);
 		contentPane.add(lblTransmision);
 		
-		cbEstado = new JComboBox();
+		Combustible[] combustibles = Combustible.values();
+		DefaultComboBoxModel<Combustible> comboBoxModel = new DefaultComboBoxModel<>(combustibles);
+		cbCombustible = new JComboBox<>(comboBoxModel);
+		cbCombustible.setBounds(323, 65, 101, 22);
+		contentPane.add(cbCombustible);
+		
+		EstadoVehiculo [] estados = EstadoVehiculo.values();
+		DefaultComboBoxModel<EstadoVehiculo> comboBoxModel2 = new DefaultComboBoxModel<>(estados);
+		cbEstado = new JComboBox<>(comboBoxModel2);
 		cbEstado.setBounds(367, 109, 30, 22);
 		contentPane.add(cbEstado);
 		
