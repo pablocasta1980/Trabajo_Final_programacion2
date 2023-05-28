@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class VistaPrincipal extends JFrame {
+public class VistaAdministrador extends JFrame {
 
 	private JPanel contentPane;
 
@@ -19,7 +19,7 @@ public class VistaPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VistaPrincipal frame = new VistaPrincipal();
+					VistaAdministrador frame = new VistaAdministrador();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +31,7 @@ public class VistaPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VistaPrincipal() {
+	public VistaAdministrador() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 	

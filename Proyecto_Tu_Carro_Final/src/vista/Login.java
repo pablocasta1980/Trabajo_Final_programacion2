@@ -88,7 +88,7 @@ public class Login extends JFrame {
 					dispose();
 					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", JOptionPane.INFORMATION_MESSAGE);
 					
-					VistaPrincipal p = new VistaPrincipal();
+					VistaAdministrador p = new VistaAdministrador();
 					p.setVisible(true);					
 				}else {
 					JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta", "ERROR", JOptionPane.ERROR_MESSAGE);
