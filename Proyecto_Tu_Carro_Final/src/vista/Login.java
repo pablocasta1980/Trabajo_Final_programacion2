@@ -103,6 +103,7 @@ public class Login extends JFrame {
 					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", 
 					JOptionPane.INFORMATION_MESSAGE);
 					
+					
 
 					VistaEmpleado p = new VistaEmpleado();
 
@@ -117,6 +118,7 @@ public class Login extends JFrame {
 					jpassClave.setText("");
 					txtUsuario.requestFocus();
 				}
+				
 			}
 		});
 		btnIngresar.setFont(new Font("Tahoma", Font.BOLD, 11));

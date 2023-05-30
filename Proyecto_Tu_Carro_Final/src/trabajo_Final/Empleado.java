@@ -10,8 +10,8 @@ public class Empleado extends Persona {
     
     private Estado tipoEstado;
 
-    public Empleado(String nombre, String apellido, int id, String correo, String contraseña) {
-        super(nombre, apellido, id, correo, contraseña);
+    public Empleado(String nombre, String apellido, int id, String correo, String contrasena) {
+        super(nombre, apellido, id, correo, contrasena);
         this.reportes = new ArrayList<>();
     }
 
