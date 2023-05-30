@@ -12,23 +12,27 @@ public abstract class Vehiculo {
 	private String fotografias;
 	
 	public enum estado {NUEVO, USADO};
-	private estado tipoEstado;
+	private EstadoVehiculo tipoEstado;
 	
 	
 	public enum abs {SI, NO};
-	private abs tipoAbs;
+	private Abs tipoAbs;
 	
 	
 	public enum combustible {GASOLINA, DIESEL, ELECTRICO, HIBRIDO};
-	private combustible tipoCombustible;
+	private Combustible tipoCombustible;
 	
 	public enum transmision {AUTOMATICA, MANUAL};
-	private transmision tipoTransmision;
+	private Transmision tipoTransmision;
 	
 	
-	public Vehiculo(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-			String placa, String fotografias,estado tipoEstado, abs tipoAbs, combustible tipoCombustible,
-			transmision tipoTransmision) {
+	public Vehiculo(String marca, String modelo, int cambios, int velocidadMaxima, 
+			int cilindraje, String placa, String fotografias, 
+			EstadoVehiculo tipoEstado, Abs tipoAbs, Combustible tipoCombustible, 
+			Transmision tipoTransmision) {
+	    // Código del constructor
+	
+
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
@@ -151,56 +155,56 @@ public abstract class Vehiculo {
 
 
 
-	public estado getTipoEstado() {
+	public EstadoVehiculo getTipoEstado() {
 		return tipoEstado;
 	}
 
 
 
 
-	public void setTipoEstado(estado tipoEstado) {
+	public void setTipoEstado(EstadoVehiculo tipoEstado) {
 		this.tipoEstado = tipoEstado;
 	}
 
 
 
 
-	public abs getTipoAbs() {
+	public Abs getTipoAbs() {
 		return tipoAbs;
 	}
 
 
 
 
-	public void setTipoAbs(abs tipoAbs) {
+	public void setTipoAbs(Abs tipoAbs) {
 		this.tipoAbs = tipoAbs;
 	}
 
 
 
 
-	public combustible getTipoCombustible() {
+	public Combustible getTipoCombustible() {
 		return tipoCombustible;
 	}
 
 
 
 
-	public void setTipoCombustible(combustible tipoCombustible) {
+	public void setTipoCombustible(Combustible tipoCombustible) {
 		this.tipoCombustible = tipoCombustible;
 	}
 
 
 
 
-	public transmision getTipoTransmision() {
+	public Transmision getTipoTransmision() {
 		return tipoTransmision;
 	}
 
 
 
 
-	public void setTipoTransmision(transmision tipoTransmision) {
+	public void setTipoTransmision(Transmision tipoTransmision) {
 		this.tipoTransmision = tipoTransmision;
 	}
 
