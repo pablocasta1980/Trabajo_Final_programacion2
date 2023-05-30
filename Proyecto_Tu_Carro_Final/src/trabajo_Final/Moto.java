@@ -3,8 +3,6 @@ package trabajo_Final;
 import java.util.ArrayList;
 
 public class Moto extends Vehiculo {
-	
-   
 
     public Moto(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
                 String fotografias, EstadoVehiculo tipoEstado, Abs tipoAbs, Combustible tipoCombustible,
@@ -24,11 +22,14 @@ public class Moto extends Vehiculo {
             System.out.println(moto.toString());
         }
     }
-
-   
-
-  
-    
+    public static Moto buscarMoto(String placa) {
+        for (Moto moto : listaMotos) {
+            if (moto.getPlaca().equals(placa)) {
+                return moto;
+            }
+        }
+        return null; // Si no se encuentra la moto, se retorna null
+    }
 
     @Override
     public String toString() {
@@ -46,16 +47,5 @@ public class Moto extends Vehiculo {
         return sb.toString();
     }
 }
-
-
-
-
-
-
-
-	
-	
-	
-	
 
 	
