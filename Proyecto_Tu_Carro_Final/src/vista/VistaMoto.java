@@ -225,10 +225,11 @@ public class VistaMoto extends JFrame {
                 tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
 		
 		 // Agregar la moto al ArrayList en la clase Moto
+		
 		if (Moto.listaMotos == null) {
-		    Moto.listaMotos = new ArrayList<Moto>();
-		}
-			Moto.listaMotos.add(moto);
+			Moto.listaMotos = new ArrayList<Moto>();
+	        }
+	        Moto.listaMotos.add(moto);
 	        
 	        // Imprimir el ArrayList completo en la consola
 	        Moto.imprimirMotos();
