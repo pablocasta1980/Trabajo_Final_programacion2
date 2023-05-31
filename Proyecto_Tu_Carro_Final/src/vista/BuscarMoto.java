@@ -1,23 +1,22 @@
 package vista;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import trabajo_Final.Moto;
 
 public class BuscarMoto extends JFrame {
-
     private JPanel contentPane;
     private JTextField txtPlacaMoto;
 
-    /**
-     * Launch the application.
-     */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -31,15 +30,11 @@ public class BuscarMoto extends JFrame {
         });
     }
 
-    /**
-     * Create the frame.
-     */
     public BuscarMoto() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 139);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
@@ -56,6 +51,20 @@ public class BuscarMoto extends JFrame {
         JButton btnBuscar = new JButton("BUSCAR");
         btnBuscar.setBounds(231, 47, 89, 23);
         contentPane.add(btnBuscar);
+        
+        btnBuscar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String placa = txtPlacaMoto.getText();
+                Moto moto = Moto.buscarMoto(placa);
+                
+                if (moto != null) {
+                    // La moto fue encontrada
+                    JOptionPane.showMessageDialog(null, "Moto encontrada:\n" + moto.toString());
+                } else {
+                    // La moto no fue encontrada
+                    JOptionPane.showMessageDialog(null, "La moto no fue encontrada.");
+                }
+            }
+        });
     }
 }
-

@@ -14,7 +14,21 @@ public class Moto extends Vehiculo {
     public static ArrayList<Moto> listaMotos = new ArrayList<>();
 
     public static void agregarMoto(Moto moto) {
+        if (listaMotos == null) {
+            listaMotos = new ArrayList<Moto>();
+        }
         listaMotos.add(moto);
+    }
+
+    
+    
+    public static Moto buscarMoto(String placa) {
+        for (Moto moto : listaMotos) {
+            if (moto.getPlaca().equalsIgnoreCase(placa)) {
+                return moto;
+            }
+        }
+        return null; // Si no se encuentra la moto, se retorna null
     }
     
     public static void imprimirMotos() {
@@ -22,14 +36,7 @@ public class Moto extends Vehiculo {
             System.out.println(moto.toString());
         }
     }
-    public static Moto buscarMoto(String placa) {
-        for (Moto moto : listaMotos) {
-            if (moto.getPlaca().equals(placa)) {
-                return moto;
-            }
-        }
-        return null; // Si no se encuentra la moto, se retorna null
-    }
+   
 
     @Override
     public String toString() {
