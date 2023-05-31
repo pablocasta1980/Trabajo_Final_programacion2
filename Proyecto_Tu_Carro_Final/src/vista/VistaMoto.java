@@ -140,6 +140,7 @@ public class VistaMoto extends JFrame {
 		lblAbs.setBounds(216, 159, 97, 14);
 		contentPane.add(lblAbs);
 		
+		
 		lblTransmision = new JLabel("TRANSMISION");
 		lblTransmision.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblTransmision.setBounds(216, 27, 97, 14);
@@ -150,6 +151,7 @@ public class VistaMoto extends JFrame {
 		cbCombustible = new JComboBox<>(comboBoxModel);
 		cbCombustible.setBounds(323, 65, 101, 22);
 		contentPane.add(cbCombustible);
+		
 		
 		EstadoVehiculo [] tipoEstado = EstadoVehiculo.values();
 		DefaultComboBoxModel<EstadoVehiculo> comboBoxModel2 = new DefaultComboBoxModel<>(tipoEstado);

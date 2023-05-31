@@ -1,0 +1,61 @@
+package vista;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class BuscarMoto extends JFrame {
+
+    private JPanel contentPane;
+    private JTextField txtPlacaMoto;
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    BuscarMoto frame = new BuscarMoto();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Create the frame.
+     */
+    public BuscarMoto() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(100, 100, 450, 139);
+        contentPane = new JPanel();
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+
+        JLabel lblDigitarPlaca = new JLabel("DIGITE LA PLACA DE LA MOTO");
+        lblDigitarPlaca.setHorizontalAlignment(SwingConstants.CENTER);
+        lblDigitarPlaca.setBounds(45, 21, 164, 14);
+        contentPane.add(lblDigitarPlaca);
+
+        txtPlacaMoto = new JTextField();
+        txtPlacaMoto.setBounds(85, 48, 86, 20);
+        contentPane.add(txtPlacaMoto);
+        txtPlacaMoto.setColumns(10);
+
+        JButton btnBuscar = new JButton("BUSCAR");
+        btnBuscar.setBounds(231, 47, 89, 23);
+        contentPane.add(btnBuscar);
+    }
+}
+
