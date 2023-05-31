@@ -1,5 +1,10 @@
 package vista;
 
+
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 import javax.swing.DefaultComboBoxModel;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -44,6 +49,9 @@ public class VistaMoto extends JFrame {
 	private JComboBox cbTransmision;
 	private JTextField txtPlaca;
 	private JTextField txtFotografias;
+	
+	
+
 
 	/**
 	 * Launch the application.

@@ -102,6 +102,16 @@ public class VistaBuscarVehiculo extends JFrame {
                     abrirVentana(new BuscarMoto());
                 }else if (rdbSedan.isSelected()) {
                 	abrirVentana (new BuscarSedan());
+                }else if (rdbBUS.isSelected()) {
+                	abrirVentana (new BuscarBus());
+                }else if (rdbCamion.isSelected()) {
+                	abrirVentana (new BuscarCamion());
+                }else if (rdbCamionetaSuv.isSelected()) {
+                	abrirVentana (new BuscarCamionetaSuv());
+                }else if (rdbDeportivo.isSelected()) {
+                	abrirVentana (new BuscarDeportivo());
+                }else if (rdbPickup.isSelected()) {
+                	abrirVentana (new BuscarPickup());
                 }
             }
         });

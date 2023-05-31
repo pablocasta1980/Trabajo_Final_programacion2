@@ -22,14 +22,15 @@ public abstract class Automovil extends Vehiculo {
 	public enum  aireAcondicionado {SI, NO};
 	private aireAcondicionado tieneAireAcond;
 	
+	
 	public Automovil(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
-			String fotografias, estado tipoEstado, abs tipoAbs, combustible tipoCombustible,
-			transmision tipoTransmision, int numeroPasajeros, int numeroPuertas, int numeroBolsas,
-			camara tieneCamara, sensorColision tieneSensorCol, sensorTrafico tieneSensorTraf, 
-			asistentePermanencia tieneAsistentePerma, aireAcondicionado tieneAireAcond) {
-		super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, 
-				tipoEstado, tipoAbs, tipoCombustible,tipoTransmision);
-		// TODO Auto-generated constructor stub
+			String fotografias, EstadoVehiculo tipoEstado, Abs tipoAbs, Combustible tipoCombustible,
+			Transmision tipoTransmision,int numeroPasajeros, int numeroPuertas, int numeroBolsas, Camara tieneCamara,
+			SensorColision tieneSensorCol,SensorTrafico tieneSensorTraf, AsistentePermanencia tieneAsistentePerma,
+			AireAcondicionado tieneAireAcond ) {
+		super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado, tipoAbs, tipoCombustible,
+				tipoTransmision);
+		
 	
 		this.numeroPasajeros = numeroPasajeros;
 		this.numeroPuertas = numeroPuertas;
@@ -45,6 +46,12 @@ public abstract class Automovil extends Vehiculo {
 
 
 	
+	
+
+
+
+
+
 	@Override
 	public abstract String toString ();
 
