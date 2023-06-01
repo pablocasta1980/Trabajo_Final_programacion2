@@ -22,6 +22,7 @@ public class Login extends JFrame {
 	private JTextField txtUsuario;
 	private JPasswordField jpassClave;
 	private JButton btnIngresar;
+	private JButton botonAtras2;
 
 	/**
 	 * Launch the application.
@@ -91,19 +92,14 @@ public class Login extends JFrame {
 					dispose();
 					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", 
 					JOptionPane.INFORMATION_MESSAGE);
-					
-
 					VistaAdministrador p = new VistaAdministrador();
-
 					p.setVisible(true);	
 					
 					
-				}else  if(txtUsuario.getText().equals("User")&& claveFinal.equals("12345")) {
+				}else  if(txtUsuario.getText().equals("user")&& claveFinal.equals("56789")) {
 					dispose();
 					JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE", 
-					JOptionPane.INFORMATION_MESSAGE);
-					
-					
+					JOptionPane.INFORMATION_MESSAGE);		
 
 					VistaEmpleado p = new VistaEmpleado();
 
@@ -122,7 +118,23 @@ public class Login extends JFrame {
 			}
 		});
 		btnIngresar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnIngresar.setBounds(291, 74, 89, 32);
+		btnIngresar.setBounds(291, 48, 89, 32);
 		contentPane.add(btnIngresar);
+		
+		botonAtras2 = new JButton("ATRAS");
+		botonAtras2.setBounds(291, 103, 89, 23);
+		contentPane.add(botonAtras2);
+		
+		botonAtras2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				Seleccionar_Perfil a1 = new Seleccionar_Perfil();
+				a1.setVisible(true);
+				
+				
+				
+			}
+		});
 	}
 }
