@@ -2,6 +2,7 @@ package trabajo_Final;
 
 import java.util.ArrayList;
 
+
 public class Sedan extends Automovil {
 
     private int capacidadMaletero;
@@ -11,12 +12,12 @@ public class Sedan extends Automovil {
     public Sedan(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje,
                 String placa, String[] fotografias, Estado tipoEstado, Abs tipoAbs,
                 Combustible tipoCombustible, Transmision tipoTransmision, int numeroPasajeros,
-                int numeroPuertas, TieneCamara tieneCamara, TieneSensor tieneSensor,
-                TieneSensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
-                AireAcond aireAcond, int capacidadMaletero, VelocidadCrucero tieneVelocidadCruce) {
+                int numeroPuertas, Camara tieneCamara, SensorColision tieneSensorColision,
+                SensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
+                AireAcondicionado TieneAireAcondicionado, int capacidadMaletero, VelocidadCrucero tieneVelocidadCruce) {
         super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado,
                 tipoAbs, tipoCombustible, tipoTransmision, numeroPasajeros, numeroPuertas, tieneCamara,
-                tieneSensor, tieneSensorTrafico, numeroBolsas, asistentePer, aireAcond);
+                tieneSensorColision, tieneSensorTrafico, numeroBolsas, asistentePer, TieneAireAcondicionado);
         this.capacidadMaletero = capacidadMaletero;
         this.tieneVelocidadCruce = tieneVelocidadCruce;
     }
@@ -53,12 +54,11 @@ public class Sedan extends Automovil {
         sb.append("Número de Pasajeros: ").append(getNumeroPasajeros()).append("\n");
         sb.append("Número de Puertas: ").append(getNumeroPuertas()).append("\n");
         sb.append("Tiene Cámara: ").append(getTieneCamara()).append("\n");
-        sb.append("Tiene Sensor: ").append(getTieneSensor()).append("\n");
+        sb.append("Tiene Sensor Colision: ").append(getTieneSensorColision()).append("\n");
         sb.append("Tiene Sensor de Tráfico: ").append(getTieneSensorTrafico()).append("\n");
         sb.append("Número de Bolsas: ").append(getNumeroBolsas()).append("\n");
         sb.append("Asistente de Permanencia: ").append(getAsistentePer()).append("\n");
-        sb.append("Aire Acondicionado: ").append(getAireAcond()).append("\n");
-        sb.append("Capacidad Maletero: ").append(capacidadMaletero).append("\n");
+        sb.append("Aire Acondicionado: ").append(getTieneAireAcondicionado()).append("\n");
         sb.append("Tiene Velocidad de Crucero: ").append(tieneVelocidadCruce).append("\n");
         return sb.toString();
     }

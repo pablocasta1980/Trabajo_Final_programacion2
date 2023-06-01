@@ -31,6 +31,7 @@ public class BuscarMoto extends JFrame {
     }
 
     public BuscarMoto() {
+    	setTitle("BUSCAR MOTO POR PLACA");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 139);
         contentPane = new JPanel();
@@ -49,8 +50,20 @@ public class BuscarMoto extends JFrame {
         txtPlacaMoto.setColumns(10);
 
         JButton btnBuscar = new JButton("BUSCAR");
-        btnBuscar.setBounds(231, 47, 89, 23);
+        btnBuscar.setBounds(211, 47, 89, 23);
         contentPane.add(btnBuscar);
+        
+        JButton btnRegresar = new JButton("REGRESAR");
+        btnRegresar.setBounds(310, 47, 109, 23);
+        contentPane.add(btnRegresar);
+
+        btnRegresar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                VistaBuscarVehiculo vistaBuscar = new VistaBuscarVehiculo();
+                vistaBuscar.setVisible(true);
+                dispose(); // Cierra la ventana actual (BuscarMoto)
+            }
+        });
         
         btnBuscar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -64,6 +77,18 @@ public class BuscarMoto extends JFrame {
                     // La moto no fue encontrada
                     JOptionPane.showMessageDialog(null, "La moto no fue encontrada.");
                 }
+                JButton btnRegresar = new JButton("REGRESAR");
+                btnRegresar.setBounds(332, 11, 89, 23);
+                contentPane.add(btnRegresar);
+
+                btnRegresar.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        VistaBuscarVehiculo vistaBuscar = new VistaBuscarVehiculo();
+                        vistaBuscar.setVisible(true);
+                        dispose(); // Cierra la ventana actual (BuscarMoto)
+                    }
+                });
+
             }
         });
     }

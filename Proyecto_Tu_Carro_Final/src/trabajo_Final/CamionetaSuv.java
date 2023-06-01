@@ -3,6 +3,16 @@ package trabajo_Final;
 
 import java.util.ArrayList;
 
+import trabajo_Final.Automovil.AireAcondicionado;
+import trabajo_Final.Automovil.AsistentePermanencia;
+import trabajo_Final.Automovil.Camara;
+import trabajo_Final.Automovil.SensorColision;
+import trabajo_Final.Automovil.SensorTrafico;
+import trabajo_Final.Vehiculo.Abs;
+import trabajo_Final.Vehiculo.Combustible;
+import trabajo_Final.Vehiculo.Estado;
+import trabajo_Final.Vehiculo.Transmision;
+
 public class CamionetaSuv extends Automovil {
     private int capacidadCarga;
     private CuatroPorCuatro esCuatroPorCuatro;
@@ -10,15 +20,15 @@ public class CamionetaSuv extends Automovil {
     public enum CuatroPorCuatro { SI, NO }
 
     public CamionetaSuv(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje,
-                        String placa, String[] fotografias, Estado tipoEstado, Abs tipoAbs,
-                        Combustible tipoCombustible, Transmision tipoTransmision, int numeroPasajeros,
-                        int numeroPuertas, TieneCamara tieneCamara, TieneSensor tieneSensor,
-                        TieneSensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
-                        AireAcond aireAcond, int capacidadCarga, CuatroPorCuatro esCuatroPorCuatro) {
+            String placa, String[] fotografias, Estado tipoEstado, Abs tipoAbs,
+            Combustible tipoCombustible, Transmision tipoTransmision, int numeroPasajeros,
+            int numeroPuertas, Camara tieneCamara, SensorColision tieneSensorColision,
+            SensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
+            AireAcondicionado tieneAireAcondicionado, int capacidadCarga, CuatroPorCuatro esCuatroPorCuatro) {
         super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
                 tipoEstado, tipoAbs, tipoCombustible, tipoTransmision, numeroPasajeros,
-                numeroPuertas, tieneCamara, tieneSensor, tieneSensorTrafico, numeroBolsas,
-                asistentePer, aireAcond);
+                numeroPuertas, tieneCamara, tieneSensorColision, tieneSensorTrafico, numeroBolsas,
+                asistentePer, tieneAireAcondicionado);
         this.capacidadCarga = capacidadCarga;
         this.esCuatroPorCuatro = esCuatroPorCuatro;
     }
@@ -85,11 +95,11 @@ public class CamionetaSuv extends Automovil {
         sb.append("Fotografías: ").append(getFotografias()).append("\n");
 
         sb.append("Tiene Cámara: ").append(getTieneCamara()).append("\n");
-        sb.append("Tiene Sensor: ").append(getTieneSensor()).append("\n");
+        sb.append("Tiene Sensor: ").append(getTieneSensorColision()).append("\n");
         sb.append("Tiene Sensor de Tráfico: ").append(getTieneSensorTrafico()).append("\n");
         sb.append("Número de Bolsas: ").append(getNumeroBolsas()).append("\n");
         sb.append("Asistente de Permanencia: ").append(getAsistentePer()).append("\n");
-        sb.append("Aire Acondicionado: ").append(getAireAcond()).append("\n");
+        sb.append("Aire Acondicionado: ").append(getTieneAireAcondicionado()).append("\n");
         sb.append("Capacidad de Carga: ").append(getCapacidadCarga()).append("\n");
         sb.append("Es 4x4: ").append(getEsCuatroPorCuatro()).append("\n");
 

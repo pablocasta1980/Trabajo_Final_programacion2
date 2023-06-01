@@ -3,6 +3,7 @@ package trabajo_Final;
 
 import java.util.ArrayList;
 
+
 public class Bus extends Automovil {
     private int capacidadMaletero;
     private int numeroEjes;
@@ -10,13 +11,14 @@ public class Bus extends Automovil {
 
     public Bus(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
                String[] fotografias, Estado tipoEstado, Abs tipoAbs, Combustible tipoCombustible,
-               Transmision tipoTransmision, int numeroPasajeros, int numeroPuertas, TieneCamara tieneCamara,
-               TieneSensor tieneSensor, TieneSensorTrafico tieneSensorTrafico, int numeroBolsas,
-               AsistentePermanencia asistentePer, AireAcond aireAcond, int capacidadMaletero, int numeroEjes,
+               Transmision tipoTransmision, int numeroPasajeros, int numeroPuertas, Camara tieneCamara,
+               SensorColision tieneSensorColision, SensorTrafico tieneSensorTrafico, int numeroBolsas,
+               AsistentePermanencia asistentePer, AireAcondicionado tieneAireAcondicionado, int capacidadMaletero, int numeroEjes,
                int numeroSalidasEmergencia) {
         super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
                 tipoEstado, tipoAbs, tipoCombustible, tipoTransmision, numeroPasajeros, numeroPuertas,
-                tieneCamara, tieneSensor, tieneSensorTrafico, numeroBolsas, asistentePer, aireAcond);
+                tieneCamara, tieneSensorColision, tieneSensorTrafico, numeroBolsas, asistentePer, tieneAireAcondicionado);
+        
         this.capacidadMaletero = capacidadMaletero;
         this.numeroEjes = numeroEjes;
         this.numeroSalidasEmergencia = numeroSalidasEmergencia;
@@ -94,11 +96,11 @@ public class Bus extends Automovil {
         sb.append("Número de Pasajeros: ").append(getNumeroPasajeros()).append("\n");
         sb.append("Número de Puertas: ").append(getNumeroPuertas()).append("\n");
         sb.append("Cámara: ").append(getTieneCamara()).append("\n");
-        sb.append("Sensor: ").append(getTieneSensor()).append("\n");
+        sb.append("Sensor de Colision: ").append(getTieneSensorColision()).append("\n");
         sb.append("Sensor de Tráfico: ").append(getTieneSensorTrafico()).append("\n");
         sb.append("Número de Bolsas: ").append(getNumeroBolsas()).append("\n");
         sb.append("Asistente Personal: ").append(getAsistentePer()).append("\n");
-        sb.append("Aire Acondicionado: ").append(getAireAcond()).append("\n");
+        sb.append("Aire Acondicionado: ").append(getTieneAireAcondicionado()).append("\n");
         sb.append("Capacidad de Maletero: ").append(capacidadMaletero).append("\n");
         sb.append("Número de Ejes: ").append(numeroEjes).append("\n");
         sb.append("Número de Salidas de Emergencia: ").append(numeroSalidasEmergencia).append("\n");
