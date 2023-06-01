@@ -8,6 +8,7 @@ public abstract class Automovil extends Vehiculo {
     private TieneSensor tieneSensor;
     private TieneSensorTrafico tieneSensorTrafico;
     private int numeroBolsas;
+
     private AsistentePermanencia asistentePer;
     private AireAcond aireAcond;
 
@@ -25,6 +26,7 @@ public abstract class Automovil extends Vehiculo {
                      AireAcond aireAcond) {
         super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado,
                 tipoAbs, tipoCombustible, tipoTransmision);
+
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.tieneCamara = tieneCamara;
@@ -99,6 +101,8 @@ public abstract class Automovil extends Vehiculo {
         this.aireAcond = aireAcond;
     }
 
+
     @Override
     public abstract String toString();
-}
+
+

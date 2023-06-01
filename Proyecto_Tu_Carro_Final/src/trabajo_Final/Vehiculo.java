@@ -2,6 +2,7 @@ package trabajo_Final;
 
 public abstract class Vehiculo {
 
+
     private String marca;
     private String modelo;
     private int cambios;
@@ -128,3 +129,4 @@ public abstract class Vehiculo {
         this.tipoTransmision = tipoTransmision;
     }
 }
+

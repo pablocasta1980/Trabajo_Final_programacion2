@@ -1,5 +1,6 @@
 package trabajo_Final;
 
+
 import java.util.ArrayList;
 
 public class Bus extends Automovil {
@@ -53,6 +54,8 @@ public class Bus extends Automovil {
         this.capacidadMaletero = capacidadMaletero;
     }
 
+
+
     public int getNumeroEjes() {
         return numeroEjes;
     }
@@ -60,6 +63,7 @@ public class Bus extends Automovil {
     public void setNumeroEjes(int numeroEjes) {
         this.numeroEjes = numeroEjes;
     }
+
 
     public int getNumeroSalidasEmergencia() {
         return numeroSalidasEmergencia;
@@ -99,5 +103,6 @@ public class Bus extends Automovil {
         sb.append("Número de Ejes: ").append(numeroEjes).append("\n");
         sb.append("Número de Salidas de Emergencia: ").append(numeroSalidasEmergencia).append("\n");
         return sb.toString();
+
     }
 }

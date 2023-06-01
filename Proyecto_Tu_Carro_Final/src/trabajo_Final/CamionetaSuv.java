@@ -1,5 +1,6 @@
 package trabajo_Final;
 
+
 import java.util.ArrayList;
 
 public class CamionetaSuv extends Automovil {
@@ -44,6 +45,7 @@ public class CamionetaSuv extends Automovil {
         for (CamionetaSuv camionetaSuv : listaCamionetasSuv) {
             System.out.println(camionetaSuv.toString());
         }
+
     }
 
     public int getCapacidadCarga() {
@@ -54,11 +56,13 @@ public class CamionetaSuv extends Automovil {
         this.capacidadCarga = capacidadCarga;
     }
 
+
     public CuatroPorCuatro getEsCuatroPorCuatro() {
         return esCuatroPorCuatro;
     }
 
     public void setEsCuatroPorCuatro(CuatroPorCuatro esCuatroPorCuatro) {
+
         this.esCuatroPorCuatro = esCuatroPorCuatro;
     }
 
@@ -70,18 +74,16 @@ public class CamionetaSuv extends Automovil {
         sb.append("Velocidad Máxima: ").append(getVelocidadMaxima()).append("\n");
         sb.append("Cilindraje: ").append(getCilindraje()).append("\n");
         sb.append("Placa: ").append(getPlaca()).append("\n");
+
         sb.append("Fotografías: ");
         for (String foto : getFotografias()) {
             sb.append(foto).append(", ");
         }
         sb.delete(sb.length() - 2, sb.length()); // Eliminar la última coma y espacio
         sb.append("\n");
-        sb.append("Estado: ").append(getTipoEstado()).append("\n");
-        sb.append("ABS: ").append(getTipoAbs()).append("\n");
-        sb.append("Combustible: ").append(getTipoCombustible()).append("\n");
-        sb.append("Transmisión: ").append(getTipoTransmision()).append("\n");
-        sb.append("Número de Pasajeros: ").append(getNumeroPasajeros()).append("\n");
-        sb.append("Número de Puertas: ").append(getNumeroPuertas()).append("\n");
+
+        sb.append("Fotografías: ").append(getFotografias()).append("\n");
+
         sb.append("Tiene Cámara: ").append(getTieneCamara()).append("\n");
         sb.append("Tiene Sensor: ").append(getTieneSensor()).append("\n");
         sb.append("Tiene Sensor de Tráfico: ").append(getTieneSensorTrafico()).append("\n");
@@ -90,6 +92,7 @@ public class CamionetaSuv extends Automovil {
         sb.append("Aire Acondicionado: ").append(getAireAcond()).append("\n");
         sb.append("Capacidad de Carga: ").append(getCapacidadCarga()).append("\n");
         sb.append("Es 4x4: ").append(getEsCuatroPorCuatro()).append("\n");
+
         return sb.toString();
     }
 }

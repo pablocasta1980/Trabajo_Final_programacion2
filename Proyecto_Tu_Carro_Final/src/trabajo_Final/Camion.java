@@ -1,5 +1,6 @@
 package trabajo_Final;
 
+
 import java.util.ArrayList;
 
 public class Camion extends Vehiculo {
@@ -87,20 +88,24 @@ public class Camion extends Vehiculo {
         sb.append("Velocidad Máxima: ").append(getVelocidadMaxima()).append("\n");
         sb.append("Cilindraje: ").append(getCilindraje()).append("\n");
         sb.append("Placa: ").append(getPlaca()).append("\n");
+
         sb.append("Fotografías: ");
         for (String foto : getFotografias()) {
             sb.append(foto).append(", ");
         }
         sb.delete(sb.length() - 2, sb.length()); // Eliminar la última coma y espacio
         sb.append("\n");
+
         sb.append("Estado: ").append(getTipoEstado()).append("\n");
         sb.append("ABS: ").append(getTipoAbs()).append("\n");
         sb.append("Combustible: ").append(getTipoCombustible()).append("\n");
         sb.append("Transmisión: ").append(getTipoTransmision()).append("\n");
+
         sb.append("Capacidad de Carga: ").append(getCapacidadCarga()).append("\n");
         sb.append("Número de Ejes: ").append(getNumeroEjes()).append("\n");
         sb.append("Tipo de Camión: ").append(getTipoCam()).append("\n");
         sb.append("Tiene Freno de Aire: ").append(getTieneFrenoAire()).append("\n");
+
         return sb.toString();
     }
 }

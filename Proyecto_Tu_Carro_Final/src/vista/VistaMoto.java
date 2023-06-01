@@ -22,6 +22,7 @@ import java.awt.EventQueue;
 
 public class VistaMoto extends JFrame {
 
+
     private JPanel contentPane;
     private JTextField txtMarca;
     private JTextField txtModelo;
@@ -189,6 +190,7 @@ public class VistaMoto extends JFrame {
         Abs tipoAbs = (Abs) cbAbs.getSelectedItem();
 
         Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
+
                 tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
 
 
