@@ -49,6 +49,19 @@ public class VistaMoto extends JFrame {
 	private JComboBox cbTransmision;
 	private JTextField txtPlaca;
 	private JTextField txtFotografias;
+	private JTextField txtNumeroPasajeros;
+	private JTextField txtNumeroPuertas;
+	private JTextField txtNumeroBolsas;
+	private JComboBox cbCamara;
+	private JComboBox cbSensorColision;
+	private JComboBox cbSensorTrafico;
+	private JComboBox cbAsistentePermanencia;
+	private JComboBox cbAireAcondicionado;
+	private JTextField txtCapacidadMaletero;
+	private JComboBox cbVelocidadCrucero;
+	private JTextField txtNumeroEjes;
+	private JTextField txtSalidasEmergencia;
+
 	
 	
 

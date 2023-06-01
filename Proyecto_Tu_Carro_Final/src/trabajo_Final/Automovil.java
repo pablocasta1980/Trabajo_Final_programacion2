@@ -6,24 +6,19 @@ public abstract class Automovil extends Vehiculo {
     private int numeroPuertas;
     private int numeroBolsas;
 
-    public enum Camara { SI, NO };
-
+    public enum Camara { SI, NO }
     private Camara tieneCamara;
 
-    public enum SensorColision { SI, NO };
-
+    public enum SensorColision { SI, NO }
     private SensorColision tieneSensorCol;
 
-    public enum SensorTrafico { SI, NO };
-
+    public enum SensorTrafico { SI, NO }
     private SensorTrafico tieneSensorTraf;
 
-    public enum AsistentePermanencia { SI, NO };
-
+    public enum AsistentePermanencia { SI, NO }
     private AsistentePermanencia tieneAsistentePerma;
 
-    public enum AireAcondicionado { SI, NO };
-
+    public enum AireAcondicionado { SI, NO }
     private AireAcondicionado tieneAireAcond;
 
     public Automovil(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
@@ -47,6 +42,7 @@ public abstract class Automovil extends Vehiculo {
     @Override
     public abstract String toString();
 
+    // Getters y setters
     public int getNumeroPasajeros() {
         return numeroPasajeros;
     }
@@ -110,5 +106,5 @@ public abstract class Automovil extends Vehiculo {
     public void setTieneAireAcond(AireAcondicionado tieneAireAcond) {
         this.tieneAireAcond = tieneAireAcond;
     }
-
 }
+
