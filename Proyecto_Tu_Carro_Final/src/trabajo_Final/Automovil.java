@@ -4,37 +4,37 @@ public abstract class Automovil extends Vehiculo {
 
     private int numeroPasajeros;
     private int numeroPuertas;
-    private TieneCamara tieneCamara;
-    private TieneSensor tieneSensor;
-    private TieneSensorTrafico tieneSensorTrafico;
+    private Camara tieneCamara;
+    private SensorColision tieneSensorColision;
+    private SensorTrafico tieneSensorTrafico;
     private int numeroBolsas;
 
     private AsistentePermanencia asistentePer;
-    private AireAcond aireAcond;
+    private AireAcondicionado tieneAireAcondicionado;
 
-    public enum TieneCamara {SI, NO}
-    public enum TieneSensor {SI, NO}
-    public enum TieneSensorTrafico {SI, NO}
+    public enum Camara {SI, NO}
+    public enum SensorColision {SI, NO}
+    public enum SensorTrafico {SI, NO}
     public enum AsistentePermanencia {SI, NO}
-    public enum AireAcond {SI, NO}
+    public enum AireAcondicionado {SI, NO}
 
     public Automovil(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje,
                      String placa, String[] fotografias, Estado tipoEstado, Abs tipoAbs,
                      Combustible tipoCombustible, Transmision tipoTransmision, int numeroPasajeros,
-                     int numeroPuertas, TieneCamara tieneCamara, TieneSensor tieneSensor,
-                     TieneSensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
-                     AireAcond aireAcond) {
+                     int numeroPuertas, Camara tieneCamara, SensorColision tieneSensorColision,
+                     SensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
+                     AireAcondicionado tieneAireAcondicionado) {
         super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado,
                 tipoAbs, tipoCombustible, tipoTransmision);
 
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
         this.tieneCamara = tieneCamara;
-        this.tieneSensor = tieneSensor;
+        this.tieneSensorColision = tieneSensorColision;
         this.tieneSensorTrafico = tieneSensorTrafico;
         this.numeroBolsas = numeroBolsas;
         this.asistentePer = asistentePer;
-        this.aireAcond = aireAcond;
+        this.tieneAireAcondicionado = tieneAireAcondicionado;
     }
 
     public int getNumeroPasajeros() {
@@ -53,27 +53,27 @@ public abstract class Automovil extends Vehiculo {
         this.numeroPuertas = numeroPuertas;
     }
 
-    public TieneCamara getTieneCamara() {
+    public Camara getTieneCamara() {
         return tieneCamara;
     }
 
-    public void setTieneCamara(TieneCamara tieneCamara) {
+    public void setTieneCamara(Camara tieneCamara) {
         this.tieneCamara = tieneCamara;
     }
 
-    public TieneSensor getTieneSensor() {
-        return tieneSensor;
+    public SensorColision getTieneSensorColision() {
+        return tieneSensorColision;
     }
 
-    public void setTieneSensor(TieneSensor tieneSensor) {
-        this.tieneSensor = tieneSensor;
+    public void setTieneSensorColision(SensorColision tieneSensorColision) {
+        this.tieneSensorColision = tieneSensorColision;
     }
 
-    public TieneSensorTrafico getTieneSensorTrafico() {
+    public SensorTrafico getTieneSensorTrafico() {
         return tieneSensorTrafico;
     }
 
-    public void setTieneSensorTrafico(TieneSensorTrafico tieneSensorTrafico) {
+    public void setTieneSensorTrafico(SensorTrafico tieneSensorTrafico) {
         this.tieneSensorTrafico = tieneSensorTrafico;
     }
 
@@ -93,16 +93,16 @@ public abstract class Automovil extends Vehiculo {
         this.asistentePer = asistentePer;
     }
 
-    public AireAcond getAireAcond() {
-        return aireAcond;
+    public AireAcondicionado getTieneAireAcondicionado() {
+        return tieneAireAcondicionado;
     }
 
-    public void setAireAcond(AireAcond aireAcond) {
-        this.aireAcond = aireAcond;
+    public void setTieneAireAcondicionado(AireAcondicionado tieneAireAcondicionado) {
+        this.tieneAireAcondicionado = tieneAireAcondicionado;
     }
 
 
     @Override
-    public abstract String toString();
+    public abstract String toString();}
 
 
