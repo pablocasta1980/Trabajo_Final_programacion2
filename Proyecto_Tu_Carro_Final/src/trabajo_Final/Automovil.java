@@ -4,48 +4,36 @@ public abstract class Automovil extends Vehiculo {
 
     private int numeroPasajeros;
     private int numeroPuertas;
+    private TieneCamara tieneCamara;
+    private TieneSensor tieneSensor;
+    private TieneSensorTrafico tieneSensorTrafico;
     private int numeroBolsas;
+    private AsistentePermanencia asistentePer;
+    private AireAcond aireAcond;
 
-    public enum Camara { SI, NO };
+    public enum TieneCamara {SI, NO}
+    public enum TieneSensor {SI, NO}
+    public enum TieneSensorTrafico {SI, NO}
+    public enum AsistentePermanencia {SI, NO}
+    public enum AireAcond {SI, NO}
 
-    private Camara tieneCamara;
-
-    public enum SensorColision { SI, NO };
-
-    private SensorColision tieneSensorCol;
-
-    public enum SensorTrafico { SI, NO };
-
-    private SensorTrafico tieneSensorTraf;
-
-    public enum AsistentePermanencia { SI, NO };
-
-    private AsistentePermanencia tieneAsistentePerma;
-
-    public enum AireAcondicionado { SI, NO };
-
-    private AireAcondicionado tieneAireAcond;
-
-    public Automovil(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
-            String fotografias, EstadoVehiculo tipoEstado, Abs tipoAbs, Combustible tipoCombustible,
-            Transmision tipoTransmision, int numeroPasajeros, int numeroPuertas, int numeroBolsas, Camara tieneCamara,
-            SensorColision tieneSensorCol, SensorTrafico tieneSensorTraf, AsistentePermanencia tieneAsistentePerma,
-            AireAcondicionado tieneAireAcond) {
-        super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado, tipoAbs,
-                tipoCombustible, tipoTransmision);
-
+    public Automovil(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje,
+                     String placa, String[] fotografias, Estado tipoEstado, Abs tipoAbs,
+                     Combustible tipoCombustible, Transmision tipoTransmision, int numeroPasajeros,
+                     int numeroPuertas, TieneCamara tieneCamara, TieneSensor tieneSensor,
+                     TieneSensorTrafico tieneSensorTrafico, int numeroBolsas, AsistentePermanencia asistentePer,
+                     AireAcond aireAcond) {
+        super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado,
+                tipoAbs, tipoCombustible, tipoTransmision);
         this.numeroPasajeros = numeroPasajeros;
         this.numeroPuertas = numeroPuertas;
-        this.numeroBolsas = numeroBolsas;
         this.tieneCamara = tieneCamara;
-        this.tieneSensorCol = tieneSensorCol;
-        this.tieneSensorTraf = tieneSensorTraf;
-        this.tieneAsistentePerma = tieneAsistentePerma;
-        this.tieneAireAcond = tieneAireAcond;
+        this.tieneSensor = tieneSensor;
+        this.tieneSensorTrafico = tieneSensorTrafico;
+        this.numeroBolsas = numeroBolsas;
+        this.asistentePer = asistentePer;
+        this.aireAcond = aireAcond;
     }
-
-    @Override
-    public abstract String toString();
 
     public int getNumeroPasajeros() {
         return numeroPasajeros;
@@ -63,6 +51,30 @@ public abstract class Automovil extends Vehiculo {
         this.numeroPuertas = numeroPuertas;
     }
 
+    public TieneCamara getTieneCamara() {
+        return tieneCamara;
+    }
+
+    public void setTieneCamara(TieneCamara tieneCamara) {
+        this.tieneCamara = tieneCamara;
+    }
+
+    public TieneSensor getTieneSensor() {
+        return tieneSensor;
+    }
+
+    public void setTieneSensor(TieneSensor tieneSensor) {
+        this.tieneSensor = tieneSensor;
+    }
+
+    public TieneSensorTrafico getTieneSensorTrafico() {
+        return tieneSensorTrafico;
+    }
+
+    public void setTieneSensorTrafico(TieneSensorTrafico tieneSensorTrafico) {
+        this.tieneSensorTrafico = tieneSensorTrafico;
+    }
+
     public int getNumeroBolsas() {
         return numeroBolsas;
     }
@@ -71,44 +83,22 @@ public abstract class Automovil extends Vehiculo {
         this.numeroBolsas = numeroBolsas;
     }
 
-    public Camara getTieneCamara() {
-        return tieneCamara;
+    public AsistentePermanencia getAsistentePer() {
+        return asistentePer;
     }
 
-    public void setTieneCamara(Camara tieneCamara) {
-        this.tieneCamara = tieneCamara;
+    public void setAsistentePer(AsistentePermanencia asistentePer) {
+        this.asistentePer = asistentePer;
     }
 
-    public SensorColision getTieneSensorCol() {
-        return tieneSensorCol;
+    public AireAcond getAireAcond() {
+        return aireAcond;
     }
 
-    public void setTieneSensorCol(SensorColision tieneSensorCol) {
-        this.tieneSensorCol = tieneSensorCol;
+    public void setAireAcond(AireAcond aireAcond) {
+        this.aireAcond = aireAcond;
     }
 
-    public SensorTrafico getTieneSensorTraf() {
-        return tieneSensorTraf;
-    }
-
-    public void setTieneSensorTraf(SensorTrafico tieneSensorTraf) {
-        this.tieneSensorTraf = tieneSensorTraf;
-    }
-
-    public AsistentePermanencia getTieneAsistentePerma() {
-        return tieneAsistentePerma;
-    }
-
-    public void setTieneAsistentePerma(AsistentePermanencia tieneAsistentePerma) {
-        this.tieneAsistentePerma = tieneAsistentePerma;
-    }
-
-    public AireAcondicionado getTieneAireAcond() {
-        return tieneAireAcond;
-    }
-
-    public void setTieneAireAcond(AireAcondicionado tieneAireAcond) {
-        this.tieneAireAcond = tieneAireAcond;
-    }
-
+    @Override
+    public abstract String toString();
 }
