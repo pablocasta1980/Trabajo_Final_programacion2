@@ -4,28 +4,48 @@ package trabajo_Final;
 import java.util.ArrayList;
 
 public class Camion extends Vehiculo {
-
     private int capacidadCarga;
     private int numeroEjes;
+    private TipoCamion tipoCam;
+    private FrenoAire tieneFrenoAire;
 
-    public enum tipoCamion { VOLQUETA, REMOLQUE, TANQUE }
-    private tipoCamion tipoCam;
-
-    public enum frenoAire { SI, NO }
-    private frenoAire tieneFrenoAire;
+    public enum TipoCamion { VOLQUETA, REMOLQUE, TANQUE }
+    public enum FrenoAire { SI, NO }
 
     public Camion(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, String placa,
-                  String fotografias, EstadoVehiculo tipoEstado, Abs tipoAbs, Combustible tipoCombustible,
-                  Transmision tipoTransmision, int capacidadCarga, int numeroEjes,
-                  tipoCamion tipoCam, frenoAire tieneFrenoAire) {
-
+                  String[] fotografias, Estado tipoEstado, Abs tipoAbs, Combustible tipoCombustible,
+                  Transmision tipoTransmision, int capacidadCarga, int numeroEjes, TipoCamion tipoCam,
+                  FrenoAire tieneFrenoAire) {
         super(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
                 tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
-
         this.capacidadCarga = capacidadCarga;
         this.numeroEjes = numeroEjes;
         this.tipoCam = tipoCam;
         this.tieneFrenoAire = tieneFrenoAire;
+    }
+    
+    public static ArrayList<Camion> listaCamiones = new ArrayList<>();
+
+    public static void agregarCamion(Camion camion) {
+        if (listaCamiones == null) {
+            listaCamiones = new ArrayList<Camion>();
+        }
+        listaCamiones.add(camion);
+    }
+
+    public static Camion buscarCamion(String placa) {
+        for (Camion camion : listaCamiones) {
+            if (camion.getPlaca().equalsIgnoreCase(placa)) {
+                return camion;
+            }
+        }
+        return null; // Si no se encuentra el camión, se retorna null
+    }
+    
+    public static void imprimirCamiones() {
+        for (Camion camion : listaCamiones) {
+            System.out.println(camion.toString());
+        }
     }
 
     public int getCapacidadCarga() {
@@ -44,19 +64,19 @@ public class Camion extends Vehiculo {
         this.numeroEjes = numeroEjes;
     }
 
-    public tipoCamion getTipoCam() {
+    public TipoCamion getTipoCam() {
         return tipoCam;
     }
 
-    public void setTipoCam(tipoCamion tipoCam) {
+    public void setTipoCam(TipoCamion tipoCam) {
         this.tipoCam = tipoCam;
     }
 
-    public frenoAire getTieneFrenoAire() {
+    public FrenoAire getTieneFrenoAire() {
         return tieneFrenoAire;
     }
 
-    public void setTieneFrenoAire(frenoAire tieneFrenoAire) {
+    public void setTieneFrenoAire(FrenoAire tieneFrenoAire) {
         this.tieneFrenoAire = tieneFrenoAire;
     }
 
@@ -68,15 +88,24 @@ public class Camion extends Vehiculo {
         sb.append("Velocidad Máxima: ").append(getVelocidadMaxima()).append("\n");
         sb.append("Cilindraje: ").append(getCilindraje()).append("\n");
         sb.append("Placa: ").append(getPlaca()).append("\n");
-        sb.append("Fotografías: ").append(getFotografias()).append("\n");
+
+        sb.append("Fotografías: ");
+        for (String foto : getFotografias()) {
+            sb.append(foto).append(", ");
+        }
+        sb.delete(sb.length() - 2, sb.length()); // Eliminar la última coma y espacio
+        sb.append("\n");
+
         sb.append("Estado: ").append(getTipoEstado()).append("\n");
         sb.append("ABS: ").append(getTipoAbs()).append("\n");
         sb.append("Combustible: ").append(getTipoCombustible()).append("\n");
         sb.append("Transmisión: ").append(getTipoTransmision()).append("\n");
-        sb.append("Capacidad de Carga: ").append(capacidadCarga).append("\n");
-        sb.append("Número de Ejes: ").append(numeroEjes).append("\n");
-        sb.append("Tipo de Camión: ").append(tipoCam).append("\n");
-        sb.append("Tiene Freno de Aire: ").append(tieneFrenoAire).append("\n");
+
+        sb.append("Capacidad de Carga: ").append(getCapacidadCarga()).append("\n");
+        sb.append("Número de Ejes: ").append(getNumeroEjes()).append("\n");
+        sb.append("Tipo de Camión: ").append(getTipoCam()).append("\n");
+        sb.append("Tiene Freno de Aire: ").append(getTieneFrenoAire()).append("\n");
+
         return sb.toString();
     }
 }
