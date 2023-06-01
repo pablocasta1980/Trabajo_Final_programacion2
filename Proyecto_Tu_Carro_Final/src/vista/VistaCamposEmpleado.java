@@ -5,13 +5,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import trabajo_Final.Administrador;
 import trabajo_Final.Empleado;
+import trabajo_Final.Moto;
 import trabajo_Final.Principal;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -109,7 +112,7 @@ public class VistaCamposEmpleado extends JFrame {
 		salir.setBounds(256, 227, 89, 23);
 		contentPane.add(salir);
 		
-		ArrayList<Empleado> empleados = new ArrayList<>();	
+		//ArrayList<Empleado> empleados = new ArrayList<>();	
 		
 		
 		registrar.addActionListener(new ActionListener() {
@@ -122,8 +125,19 @@ public class VistaCamposEmpleado extends JFrame {
 				String  email = textFieldEmail.getText();
 				String contrasena = textFieldContrasena.getText();	
 				
-				Empleado em = new Empleado(nom,ape,ced,email,contrasena);				
-				empleados.add(em);
+				Empleado em = new Empleado(nom,ape,ced,email,contrasena);	
+				
+				if (Administrador.listaEmpleados == null) {
+					Administrador.listaEmpleados = new ArrayList<Empleado>();
+			        }
+			        Administrador.listaEmpleados.add(em);
+			        
+			        // Imprimir el ArrayList completo en la consola
+			        Administrador.imprimirNombreEmpleados();
+			        System.out.println("Empleado agregado correctamente");
+			        
+
+			        
 				
 				textFieldNom.setText("");
 				textFieldApe.setText("");
