@@ -19,6 +19,7 @@ import trabajo_Final.AsistentePermanencia;
 import trabajo_Final.AireAcondicionado;
 import trabajo_Final.VelocidadCrucero;
 
+
 public class VistaBus extends JFrame {
 
 	private JPanel contentPane;
@@ -51,7 +52,7 @@ public class VistaBus extends JFrame {
 	private JTextField txtSalidasEmergencia;
 
 	/**
-	 * Launch the application.
+	 * Inicia la aplicación.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -67,7 +68,7 @@ public class VistaBus extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Crea la ventana.
 	 */
 	public VistaBus() {
 		setTitle("AUTOBUSES");
@@ -85,257 +86,327 @@ public class VistaBus extends JFrame {
 
 		JLabel lblModelo = new JLabel("MODELO:");
 		lblModelo.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblModelo.setBounds(13, 69, 97, 14);
+		lblModelo.setBounds(10, 66, 97, 14);
 		contentPane.add(lblModelo);
 
 		JLabel lblCambios = new JLabel("CAMBIOS:");
 		lblCambios.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCambios.setBounds(42, 112, 68, 14);
+		lblCambios.setBounds(42, 94, 68, 14);
 		contentPane.add(lblCambios);
 
 		JLabel lblCombustible = new JLabel("COMBUSTIBLE");
 		lblCombustible.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCombustible.setBounds(216, 69, 97, 14);
+		lblCombustible.setBounds(297, 27, 97, 14);
 		contentPane.add(lblCombustible);
 
 		JLabel lblCilindraje = new JLabel("CILINDRAJE:");
 		lblCilindraje.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCilindraje.setBounds(42, 159, 68, 14);
+		lblCilindraje.setBounds(10, 127, 97, 14);
 		contentPane.add(lblCilindraje);
 
 		txtMarca = new JTextField();
-		txtMarca.setBounds(120, 24, 140, 20);
+		txtMarca.setBounds(120, 24, 117, 20);
 		contentPane.add(txtMarca);
 		txtMarca.setColumns(10);
 
 		txtModelo = new JTextField();
-		txtModelo.setBounds(120, 66, 86, 20);
-		contentPane.add(txtModelo);
 		txtModelo.setColumns(10);
+		txtModelo.setBounds(120, 63, 117, 20);
+		contentPane.add(txtModelo);
 
 		txtCambios = new JTextField();
-		txtCambios.setBounds(120, 109, 86, 20);
-		contentPane.add(txtCambios);
 		txtCambios.setColumns(10);
+		txtCambios.setBounds(120, 91, 68, 20);
+		contentPane.add(txtCambios);
+
+		txtCilindraje = new JTextField();
+		txtCilindraje.setColumns(10);
+		txtCilindraje.setBounds(120, 124, 68, 20);
+		contentPane.add(txtCilindraje);
 
 		txtVelocidadMax = new JTextField();
-		txtVelocidadMax.setBounds(120, 198, 86, 20);
+		txtVelocidadMax.setBounds(120, 157, 68, 20);
 		contentPane.add(txtVelocidadMax);
 		txtVelocidadMax.setColumns(10);
 
-		txtCilindraje = new JTextField();
-		txtCilindraje.setBounds(120, 156, 86, 20);
-		contentPane.add(txtCilindraje);
-		txtCilindraje.setColumns(10);
-
-		cbCombustible = new JComboBox();
-		cbCombustible.setModel(new DefaultComboBoxModel(Combustible.values()));
-		cbCombustible.setBounds(333, 66, 143, 20);
+		Combustible[] tipoCombustible = Combustible.values();
+		DefaultComboBoxModel<Combustible> comboBoxModel = new DefaultComboBoxModel<>(tipoCombustible);
+		cbCombustible = new JComboBox<>(comboBoxModel);
+		cbCombustible.setBounds(404, 23, 101, 22);
 		contentPane.add(cbCombustible);
 
-		lblVelocidadMax_1 = new JLabel("VELOCIDAD MAX:");
+
+		lblVelocidadMax_1 = new JLabel("VELOCIDAD MÁXIMA:");
 		lblVelocidadMax_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblVelocidadMax_1.setBounds(0, 201, 110, 14);
+		lblVelocidadMax_1.setBounds(10, 160, 97, 14);
 		contentPane.add(lblVelocidadMax_1);
 
 		lblEstado = new JLabel("ESTADO:");
 		lblEstado.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblEstado.setBounds(224, 27, 68, 14);
+		lblEstado.setBounds(312, 385, 68, 14);
 		contentPane.add(lblEstado);
 
 		lblAbs = new JLabel("ABS:");
 		lblAbs.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblAbs.setBounds(10, 244, 63, 14);
+		lblAbs.setBounds(326, 94, 68, 14);
 		contentPane.add(lblAbs);
 
-		lblTransmision = new JLabel("TRANSMISION:");
+		lblTransmision = new JLabel("TRANSMISIÓN:");
 		lblTransmision.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblTransmision.setBounds(189, 112, 94, 14);
+		lblTransmision.setBounds(287, 256, 97, 14);
 		contentPane.add(lblTransmision);
 
-		cbEstado = new JComboBox();
-		cbEstado.setModel(new DefaultComboBoxModel(EstadoVehiculo.values()));
-		cbEstado.setBounds(333, 24, 143, 20);
+		EstadoVehiculo[] tipoEstado = EstadoVehiculo.values();
+		DefaultComboBoxModel<EstadoVehiculo> comboBoxModel2 = new DefaultComboBoxModel<>(tipoEstado);
+		cbEstado = new JComboBox<>(comboBoxModel2);
+		cbEstado.setBounds(394, 381, 101, 22);
 		contentPane.add(cbEstado);
 
-		cbAbs = new JComboBox();
-		cbAbs.setModel(new DefaultComboBoxModel(Abs.values()));
-		cbAbs.setBounds(83, 241, 123, 20);
+
+		Abs[] tipoAbs = Abs.values();
+		DefaultComboBoxModel<Abs> comboBoxModel3 = new DefaultComboBoxModel<>(tipoAbs);
+		cbAbs = new JComboBox<>(comboBoxModel3);
+		cbAbs.setBounds(394, 252, 101, 22);
 		contentPane.add(cbAbs);
 
-		cbTransmision = new JComboBox();
-		cbTransmision.setModel(new DefaultComboBoxModel(Transmision.values()));
-		cbTransmision.setBounds(333, 109, 143, 20);
+
+		Transmision[] tipoTransmision = Transmision.values();
+		DefaultComboBoxModel<Transmision> comboBoxMode4 = new DefaultComboBoxModel<>(tipoTransmision);
+		cbTransmision = new JComboBox<>(comboBoxMode4);
+		cbTransmision.setBounds(404, 287, 101, 22);
 		contentPane.add(cbTransmision);
 
-		txtPlaca = new JTextField();
-		txtPlaca.setBounds(120, 285, 86, 20);
-		contentPane.add(txtPlaca);
-		txtPlaca.setColumns(10);
-
-		txtFotografias = new JTextField();
-		txtFotografias.setBounds(333, 156, 86, 20);
-		contentPane.add(txtFotografias);
-		txtFotografias.setColumns(10);
 
 		JLabel lblPlaca = new JLabel("PLACA:");
 		lblPlaca.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblPlaca.setBounds(42, 288, 68, 14);
+		lblPlaca.setBounds(20, 256, 68, 14);
 		contentPane.add(lblPlaca);
 
-		JLabel lblFotografias = new JLabel("FOTOGRAFIAS:");
+		JLabel lblFotografias = new JLabel("FOTOGRAFÍAS:");
 		lblFotografias.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblFotografias.setBounds(216, 159, 97, 14);
+		lblFotografias.setBounds(10, 291, 97, 14);
 		contentPane.add(lblFotografias);
 
-		JLabel lblNumeroPasajeros = new JLabel("NUM. PASAJEROS:");
+		JLabel lblNumeroPasajeros = new JLabel("NÚMERO PASAJEROS:");
 		lblNumeroPasajeros.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNumeroPasajeros.setBounds(0, 330, 110, 14);
+		lblNumeroPasajeros.setBounds(10, 322, 97, 14);
 		contentPane.add(lblNumeroPasajeros);
 
-		JLabel lblNumeroPuertas = new JLabel("NUM. PUERTAS:");
+		JLabel lblNumeroPuertas = new JLabel("NÚMERO PUERTAS:");
 		lblNumeroPuertas.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNumeroPuertas.setBounds(189, 201, 94, 14);
+		lblNumeroPuertas.setBounds(10, 354, 97, 14);
 		contentPane.add(lblNumeroPuertas);
 
-		JLabel lblNumeroBolsas = new JLabel("NUM. BOLSAS:");
+		JLabel lblNumeroBolsas = new JLabel("NÚMERO BOLSAS:");
 		lblNumeroBolsas.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNumeroBolsas.setBounds(224, 244, 68, 14);
+		lblNumeroBolsas.setBounds(20, 193, 97, 14);
 		contentPane.add(lblNumeroBolsas);
 
-		JLabel lblCamara = new JLabel("CAMARA:");
+		txtPlaca = new JTextField();
+		txtPlaca.setColumns(10);
+		txtPlaca.setBounds(98, 253, 97, 20);
+		contentPane.add(txtPlaca);
+
+		txtFotografias = new JTextField();
+		txtFotografias.setColumns(10);
+		txtFotografias.setBounds(120, 288, 101, 20);
+		contentPane.add(txtFotografias);
+
+		txtNumeroPasajeros = new JTextField();
+		txtNumeroPasajeros.setColumns(10);
+		txtNumeroPasajeros.setBounds(120, 319, 101, 20);
+		contentPane.add(txtNumeroPasajeros);
+
+		txtNumeroPuertas = new JTextField();
+		txtNumeroPuertas.setColumns(10);
+		txtNumeroPuertas.setBounds(120, 351, 97, 20);
+		contentPane.add(txtNumeroPuertas);
+
+		txtNumeroBolsas = new JTextField();
+		txtNumeroBolsas.setColumns(10);
+		txtNumeroBolsas.setBounds(120, 190, 62, 20);
+		contentPane.add(txtNumeroBolsas);
+
+		JLabel lblCamara = new JLabel("CÁMARA:");
 		lblCamara.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCamara.setBounds(10, 371, 63, 14);
+		lblCamara.setBounds(326, 66, 68, 14);
 		contentPane.add(lblCamara);
 
-		JLabel lblSensorColision = new JLabel("SENSOR COLISION:");
+		JLabel lblSensorColision = new JLabel("SENSOR COLISIÓN:");
 		lblSensorColision.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblSensorColision.setBounds(189, 330, 94, 14);
+		lblSensorColision.setBounds(256, 127, 148, 14);
 		contentPane.add(lblSensorColision);
 
-		JLabel lblSensorTrafico = new JLabel("SENSOR TRAFICO:");
+		JLabel lblSensorTrafico = new JLabel("SENSOR TRÁFICO:");
 		lblSensorTrafico.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblSensorTrafico.setBounds(10, 412, 63, 14);
+		lblSensorTrafico.setBounds(256, 160, 148, 14);
 		contentPane.add(lblSensorTrafico);
 
 		JLabel lblAsistentePermanencia = new JLabel("ASISTENTE PERMANENCIA:");
 		lblAsistentePermanencia.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblAsistentePermanencia.setBounds(189, 371, 138, 14);
+		lblAsistentePermanencia.setBounds(228, 193, 176, 14);
 		contentPane.add(lblAsistentePermanencia);
 
 		JLabel lblAireAcondicionado = new JLabel("AIRE ACONDICIONADO:");
 		lblAireAcondicionado.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblAireAcondicionado.setBounds(189, 412, 138, 14);
+		lblAireAcondicionado.setBounds(228, 222, 176, 14);
 		contentPane.add(lblAireAcondicionado);
-
-		txtNumeroPasajeros = new JTextField();
-		txtNumeroPasajeros.setBounds(120, 327, 86, 20);
-		contentPane.add(txtNumeroPasajeros);
-		txtNumeroPasajeros.setColumns(10);
-
-		txtNumeroPuertas = new JTextField();
-		txtNumeroPuertas.setBounds(333, 198, 86, 20);
-		contentPane.add(txtNumeroPuertas);
-		txtNumeroPuertas.setColumns(10);
-
-		txtNumeroBolsas = new JTextField();
-		txtNumeroBolsas.setBounds(333, 241, 86, 20);
-		contentPane.add(txtNumeroBolsas);
-		txtNumeroBolsas.setColumns(10);
-
-		cbCamara = new JComboBox();
-		cbCamara.setModel(new DefaultComboBoxModel(Camara.values()));
-		cbCamara.setBounds(83, 368, 123, 20);
-		contentPane.add(cbCamara);
-
-		cbSensorColision = new JComboBox();
-		cbSensorColision.setModel(new DefaultComboBoxModel(SensorColision.values()));
-		cbSensorColision.setBounds(333, 327, 143, 20);
-		contentPane.add(cbSensorColision);
-
-		cbSensorTrafico = new JComboBox();
-		cbSensorTrafico.setModel(new DefaultComboBoxModel(SensorTrafico.values()));
-		cbSensorTrafico.setBounds(83, 409, 123, 20);
-		contentPane.add(cbSensorTrafico);
-
-		cbAsistentePermanencia = new JComboBox();
-		cbAsistentePermanencia.setModel(new DefaultComboBoxModel(AsistentePermanencia.values()));
-		cbAsistentePermanencia.setBounds(333, 368, 143, 20);
-		contentPane.add(cbAsistentePermanencia);
-
-		cbAireAcondicionado = new JComboBox();
-		cbAireAcondicionado.setModel(new DefaultComboBoxModel(AireAcondicionado.values()));
-		cbAireAcondicionado.setBounds(333, 409, 143, 20);
-		contentPane.add(cbAireAcondicionado);
 
 		JLabel lblCapacidadMaletero = new JLabel("CAPACIDAD MALETERO:");
 		lblCapacidadMaletero.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCapacidadMaletero.setBounds(10, 453, 139, 14);
+		lblCapacidadMaletero.setBounds(-64, 231, 188, 14);
 		contentPane.add(lblCapacidadMaletero);
 
 		JLabel lblVelocidadCrucero = new JLabel("VELOCIDAD CRUCERO:");
 		lblVelocidadCrucero.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblVelocidadCrucero.setBounds(189, 453, 138, 14);
+		lblVelocidadCrucero.setBounds(216, 291, 188, 14);
 		contentPane.add(lblVelocidadCrucero);
 
-		txtCapacidadMaletero = new JTextField();
-		txtCapacidadMaletero.setBounds(159, 450, 86, 20);
-		contentPane.add(txtCapacidadMaletero);
-		txtCapacidadMaletero.setColumns(10);
+		JLabel lblNumeroEjes = new JLabel("NÚMERO EJES:");
+		lblNumeroEjes.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNumeroEjes.setBounds(256, 322, 148, 14);
+		contentPane.add(lblNumeroEjes);
 
-		cbVelocidadCrucero = new JComboBox();
-		cbVelocidadCrucero.setModel(new DefaultComboBoxModel(VelocidadCrucero.values()));
-		cbVelocidadCrucero.setBounds(333, 450, 143, 20);
+		JLabel lblSalidasEmergencia = new JLabel("SALIDAS DE EMERGENCIA:");
+		lblSalidasEmergencia.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSalidasEmergencia.setBounds(216, 354, 188, 14);
+		contentPane.add(lblSalidasEmergencia);
+
+		/**EstadoVehiculo[] tipoEstado = EstadoVehiculo.values();
+		DefaultComboBoxModel<EstadoVehiculo> comboBoxMode33 = new DefaultComboBoxModel<>(tipoEstado);
+		cbEstado = new JComboBox<>(comboBoxMode33);
+		cbEstado.setBounds(120, 218, 101, 22);
+		contentPane.add(cbEstado);**/
+
+		Camara[] tipoCamara = Camara.values();
+		DefaultComboBoxModel<Camara> comboBoxModel6 = new DefaultComboBoxModel<>(tipoCamara);
+		cbCamara = new JComboBox<>(comboBoxModel6);
+		cbCamara.setBounds(414, 63, 91, 20);
+		contentPane.add(cbCamara);
+
+		SensorColision[] tipoSensorColision = SensorColision.values();
+		DefaultComboBoxModel<SensorColision> comboBoxModel9 = new DefaultComboBoxModel<>(tipoSensorColision);
+		cbSensorColision = new JComboBox<>(comboBoxModel9);
+		cbSensorColision.setBounds(414, 124, 81, 20);
+		contentPane.add(cbSensorColision);
+
+		SensorTrafico[] tipoSensorTrafico = SensorTrafico.values();
+		DefaultComboBoxModel<SensorTrafico> comboBoxModel5 = new DefaultComboBoxModel<>(tipoSensorTrafico);
+		cbSensorTrafico = new JComboBox<>(comboBoxModel5);
+		cbSensorTrafico.setBounds(414, 157, 81, 20);
+		contentPane.add(cbSensorTrafico);
+
+		AsistentePermanencia[] tipoAsistentePermanencia = AsistentePermanencia.values();
+		DefaultComboBoxModel<AsistentePermanencia> comboBoxMode23 = new DefaultComboBoxModel<>(tipoAsistentePermanencia);
+		cbAsistentePermanencia = new JComboBox<>(comboBoxMode23);
+		cbAsistentePermanencia.setBounds(414, 190, 81, 20);
+		contentPane.add(cbAsistentePermanencia);
+
+
+		AireAcondicionado[] tipoAireAcondicionado = AireAcondicionado.values();
+		DefaultComboBoxModel<AireAcondicionado> comboBoxModel11 = new DefaultComboBoxModel<>(tipoAireAcondicionado);
+		cbAireAcondicionado = new JComboBox<>(comboBoxModel11);
+		cbAireAcondicionado.setBounds(414, 223, 81, 20);
+		contentPane.add(cbAireAcondicionado);
+
+		
+
+		txtCapacidadMaletero = new JTextField();
+		txtCapacidadMaletero.setColumns(10);
+		txtCapacidadMaletero.setBounds(130, 228, 81, 20);
+		contentPane.add(txtCapacidadMaletero);
+
+		VelocidadCrucero[] tipoVelocidadCrucero = VelocidadCrucero.values();
+		DefaultComboBoxModel<VelocidadCrucero> comboBoxModel12 = new DefaultComboBoxModel<>(tipoVelocidadCrucero);
+		cbVelocidadCrucero = new JComboBox<>(comboBoxModel12);
+		cbVelocidadCrucero.setBounds(424, 91, 81, 20);
 		contentPane.add(cbVelocidadCrucero);
 
-		JButton btnGuardar = new JButton("Guardar");
+		
+
+		txtNumeroEjes = new JTextField();
+		txtNumeroEjes.setColumns(10);
+		txtNumeroEjes.setBounds(414, 319, 81, 20);
+		contentPane.add(txtNumeroEjes);
+
+		txtSalidasEmergencia = new JTextField();
+		txtSalidasEmergencia.setColumns(10);
+		txtSalidasEmergencia.setBounds(414, 351, 81, 20);
+		contentPane.add(txtSalidasEmergencia);
+
+		JButton btnGuardar = new JButton("GUARDAR");
 		btnGuardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				// Se capturan los valores desde la vista VistaBus
-				String marca = txtMarca.getText();
-				String modelo = txtModelo.getText();
-				int cambios = Integer.parseInt(txtCambios.getText());
-				int velocidadMaxima = Integer.parseInt(txtVelocidadMax.getText());
-				int cilindraje = Integer.parseInt(txtCilindraje.getText());
-				String placa = txtPlaca.getText();
-				String fotografias = txtFotografias.getText();
-				int numeroPasajeros = Integer.parseInt(txtNumeroPasajeros.getText());
-				int numeroPuertas = Integer.parseInt(txtNumeroPuertas.getText());
-				int numeroBolsas = Integer.parseInt(txtNumeroBolsas.getText());
-				int capacidadMaletero = Integer.parseInt(txtCapacidadMaletero.getText());
-				int numeroEjes = Integer.parseInt(txtNumeroEjes.getText());
-				int salidasEmergencia = Integer.parseInt(txtSalidasEmergencia.getText());
+		    public void actionPerformed(ActionEvent arg0) {
+		        // Crear el objeto Bus con los valores ingresados
+		        String placa = txtPlaca.getText();
+		        String fotografias = txtFotografias.getText();
+		        String marca = txtMarca.getText();
+		        String modelo = txtModelo.getText();
+		        int cambios = Integer.parseInt(txtCambios.getText());
+		        int velocidadMaxima = Integer.parseInt(txtVelocidadMax.getText());
+		        int cilindraje = Integer.parseInt(txtCilindraje.getText());
+		        Combustible tipoCombustible = (Combustible) cbCombustible.getSelectedItem();
+		        EstadoVehiculo tipoEstado = (EstadoVehiculo) cbEstado.getSelectedItem();
+		        Transmision tipoTransmision = (Transmision) cbTransmision.getSelectedItem();
+		        Abs tipoAbs = (Abs) cbAbs.getSelectedItem();
+		        int numeroPasajeros = Integer.parseInt(txtNumeroPasajeros.getText());
+		        int numeroPuertas = Integer.parseInt(txtNumeroPuertas.getText());
+		        int numeroBolsas = Integer.parseInt(txtNumeroBolsas.getText());
+		        Bus.Camara tieneCamara = (Bus.Camara) cbCamara.getSelectedItem();
+		        Bus.SensorColision tieneSensorCol = (Bus.SensorColision) cbSensorColision.getSelectedItem();
+		        Bus.SensorTrafico tieneSensorTraf = (Bus.SensorTrafico) cbSensorTrafico.getSelectedItem();
+		        Bus.AsistentePermanencia tieneAsistentePerma = (Bus.AsistentePermanencia) cbAsistentePermanencia.getSelectedItem();
+		        Bus.AireAcondicionado tieneAireAcond = (Bus.AireAcondicionado) cbAireAcondicionado.getSelectedItem();
+		        int capacidadMaletero = Integer.parseInt(txtCapacidadMaletero.getText());
+		        Bus.VelocidadCrucero tieneVelocidadCruce = (Bus.VelocidadCrucero) cbVelocidadCrucero.getSelectedItem();
+		        int numeroEjes = Integer.parseInt(txtNumeroEjes.getText());
+		        int salidasEmergencia = Integer.parseInt(txtSalidasEmergencia.getText());
 
-				EstadoVehiculo tipoEstado = (EstadoVehiculo) cbEstado.getSelectedItem();
-				Abs tipoAbs = (Abs) cbAbs.getSelectedItem();
-				Combustible tipoCombustible = (Combustible) cbCombustible.getSelectedItem();
-				Transmision tipoTransmision = (Transmision) cbTransmision.getSelectedItem();
-				Camara tieneCamara = (Camara) cbCamara.getSelectedItem();
-				SensorColision tieneSensorCol = (SensorColision) cbSensorColision.getSelectedItem();
-				SensorTrafico tieneSensorTraf = (SensorTrafico) cbSensorTrafico.getSelectedItem();
-				AsistentePermanencia tieneAsistentePerma = (AsistentePermanencia) cbAsistentePermanencia.getSelectedItem();
-				AireAcondicionado tieneAireAcond = (AireAcondicionado) cbAireAcondicionado.getSelectedItem();
-				velocidadCrucero tieneVelocidadCruce = (velocidadCrucero) cbVelocidadCrucero.getSelectedItem();
-
-				// Creación del objeto Bus con los valores capturados
-				Bus bus = new Bus(marca, modelo, cambios, velocidadMaxima, cilindraje, 
-				                  placa, fotografias, tipoEstado, tipoAbs, tipoCombustible, 
-				                  tipoTransmision, numeroPasajeros, numeroPuertas, 
-				                  numeroBolsas, tieneCamara, tieneSensorCol, 
-				                  tieneSensorTraf, tieneAsistentePerma, tieneAireAcond, 
-				                  capacidadMaletero, tieneVelocidadCruce, numeroEjes, salidasEmergencia);
-
-
-
-				// Guardar el objeto Bus en un ArrayList
-				ArrayList<Bus> buses = new ArrayList<>();
-				buses.add(bus);
-
-				// Imprimir los datos del objeto Bus
-				for (Bus b : buses) {
-					System.out.println(b.toString());
-				}
+				Bus bus = new Bus(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado,
+		                tipoAbs, tipoCombustible, tipoTransmision, numeroPasajeros, numeroPuertas, numeroBolsas,
+		                tieneCamara, tieneSensorCol, tieneSensorTraf, tieneAsistentePerma, tieneAireAcond,
+		                capacidadMaletero, tieneVelocidadCruce, numeroEjes, salidasEmergencia);
+				
+				
+				
+				// Guardar el objeto Bus en una lista o realizar alguna acción con los datos
+				// guardados
+				System.out.println(bus);
 			}
 		});
+		btnGuardar.setBounds(120, 452, 89, 23);
+		contentPane.add(btnGuardar);
+
+		JButton btnLimpiar = new JButton("LIMPIAR");
+		btnLimpiar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// Limpiar los campos de texto y reiniciar las selecciones de los combobox
+				txtMarca.setText("");
+				txtModelo.setText("");
+				txtCambios.setText("");
+				txtVelocidadMax.setText("");
+				txtCilindraje.setText("");
+				cbCombustible.setSelectedIndex(0);
+				cbEstado.setSelectedIndex(0);
+				cbAbs.setSelectedIndex(0);
+				cbTransmision.setSelectedIndex(0);
+				txtPlaca.setText("");
+				txtFotografias.setText("");
+				txtNumeroPasajeros.setText("");
+				txtNumeroPuertas.setText("");
+				txtNumeroBolsas.setText("");
+				cbCamara.setSelectedIndex(0);
+				cbSensorColision.setSelectedIndex(0);
+				cbSensorTrafico.setSelectedIndex(0);
+				cbAsistentePermanencia.setSelectedIndex(0);
+				cbAireAcondicionado.setSelectedIndex(0);
+				txtCapacidadMaletero.setText("");
+				cbVelocidadCrucero.setSelectedIndex(0);
+				txtNumeroEjes.setText("");
+				txtSalidasEmergencia.setText("");
+			}
+		});
+		btnLimpiar.setBounds(231, 452, 89, 23);
+		contentPane.add(btnLimpiar);
 	}
 }
