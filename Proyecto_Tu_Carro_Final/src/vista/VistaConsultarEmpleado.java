@@ -1,6 +1,8 @@
 package vista;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -8,15 +10,19 @@ import javax.swing.border.EmptyBorder;
 
 import vista.VistaCamposEmpleado;
 import trabajo_Final.Empleado;
+import trabajo_Final.Administrador;
+import trabajo_Final.Persona;
+import trabajo_Final.Moto;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class VistaConsultarEmpleado extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textoCedu;
 
 	/**
 	 * Launch the application.
@@ -51,14 +57,31 @@ public class VistaConsultarEmpleado extends JFrame {
 		lblNewLabel.setBounds(10, 21, 87, 14);
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setBounds(85, 18, 122, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textoCedu = new JTextField();
+		textoCedu.setBounds(85, 18, 122, 20);
+		contentPane.add(textoCedu);
+		textoCedu.setColumns(10);
 		
-		JButton btnNewButton = new JButton("BUSCAR");
-		btnNewButton.setBounds(288, 17, 89, 23);
-		contentPane.add(btnNewButton);
+		JButton botonBuscar = new JButton("BUSCAR");
+		botonBuscar.setBounds(288, 17, 89, 23);
+		contentPane.add(botonBuscar);
+		
+		 botonBuscar.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                int cedula = Integer.parseInt(textoCedu.getText());
+	               
+	                Empleado a1 = Administrador.buscarEmpleado(cedula);;
+	                
+	                	                
+	                if (a1.getNombre().equals("")) {
+	                    
+	                    JOptionPane.showMessageDialog(null, "No encontrado");
+	                } else {
+	                    // Empleado en la base de datos
+	                    JOptionPane.showMessageDialog(null, "Empleado Activo.");
+	                }
+	            }
+	        });
 		
 		
 		

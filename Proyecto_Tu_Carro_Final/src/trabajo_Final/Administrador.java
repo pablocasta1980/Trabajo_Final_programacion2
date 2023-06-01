@@ -1,5 +1,6 @@
 package trabajo_Final;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Administrador extends Persona {
@@ -11,20 +12,41 @@ public class Administrador extends Persona {
     // Funcionalidades adicionales del administrador
     
 
-    @Override
+    public static ArrayList<Empleado> listaEmpleados = new ArrayList<>();
+   
     
-    public void registrarEmpleado () {
+    public static void registrarEmpleado (Empleado lista) {
         // Lógica para registrar un nuevo empleado en el sistema    
     	
+    	if (listaEmpleados == null) {
+            listaEmpleados = new ArrayList<Empleado>();
+        }
+        listaEmpleados.add(lista);
     	System.out.println("bien");
     	
     }
     
-    
-
-    public void actualizarEmpleado(Empleado empleado) {
-        // Lógica para gestionar los datos de un empleado existente (actualizar datos)
+    public static void imprimirNombreEmpleados() {
+        for (Empleado e : listaEmpleados) {
+            System.out.println(e.getNombre());
+        }
     }
+    
+   
+    
+    public static Empleado buscarEmpleado(int ced) {
+    	
+        // Lógica para gestionar los datos de un empleado existente (actualizar datos)
+    	
+    	for (Empleado e1 : listaEmpleados) {
+            if (e1.getCedula()==(ced)) {
+                return e1;
+            }
+        }
+        return null; // Si no se encuentra la moto, se retorna null
+    }
+    	
+    
     
     public void bloquearEmpleado(Empleado empleado) {
         // Lógica para gestionar los datos de un empleado existente (bloquear empleado)
@@ -37,6 +59,12 @@ public class Administrador extends Persona {
     public void generarReportes( Date fechaInicio, Date fechaFinal) {
         // Lógica para ver los reportes de negocios realizados por los empleados
     }
+
+	@Override
+	public void registrarEmpleado() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
 
