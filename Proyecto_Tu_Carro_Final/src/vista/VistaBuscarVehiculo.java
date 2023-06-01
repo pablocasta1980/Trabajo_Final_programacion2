@@ -13,21 +13,14 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.Font;
 
 public class VistaBuscarVehiculo extends JFrame {
-
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+    private JPanel contentPane;
     private ButtonGroup buttonGroup;
     private JPanel cardPanel;
     private CardLayout cardLayout;
 
-    /**
-     * Launch the application.
-     */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -41,9 +34,6 @@ public class VistaBuscarVehiculo extends JFrame {
         });
     }
 
-    /**
-     * Create the frame.
-     */
     public VistaBuscarVehiculo() {
         setTitle("BUSCAR VEHICULO");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -72,7 +62,7 @@ public class VistaBuscarVehiculo extends JFrame {
 
         JRadioButton rdbCamionetaSuv = new JRadioButton("CAMIONETA SUV");
         buttonGroup.add(rdbCamionetaSuv);
-        rdbCamionetaSuv.setBounds(179, 171, 123, 23);
+        rdbCamionetaSuv.setBounds(46, 180, 123, 23);
         contentPane.add(rdbCamionetaSuv);
 
         JRadioButton rdbDeportivo = new JRadioButton("DEPORTIVO");
@@ -96,26 +86,29 @@ public class VistaBuscarVehiculo extends JFrame {
         contentPane.add(rdbSedan);
 
         JButton btnSiguiente = new JButton("SIGUIENTE");
+        btnSiguiente.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnSiguiente.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (rdbMoto.isSelected()) {
                     abrirVentana(new BuscarMoto());
-                }else if (rdbSedan.isSelected()) {
-                	abrirVentana (new BuscarSedan());
-                }else if (rdbBUS.isSelected()) {
-                	abrirVentana (new BuscarBus());
-                }else if (rdbCamion.isSelected()) {
-                	abrirVentana (new BuscarCamion());
-                }else if (rdbCamionetaSuv.isSelected()) {
-                	abrirVentana (new BuscarCamionetaSuv());
-                }else if (rdbDeportivo.isSelected()) {
-                	abrirVentana (new BuscarDeportivo());
-                }else if (rdbPickup.isSelected()) {
-                	abrirVentana (new BuscarPickup());
+                } else if (rdbSedan.isSelected()) {
+                    abrirVentana(new BuscarSedan());
+                } else if (rdbBUS.isSelected()) {
+                    abrirVentana(new BuscarBus());
+                } else if (rdbCamion.isSelected()) {
+                    abrirVentana(new BuscarCamion());
+                } else if (rdbCamionetaSuv.isSelected()) {
+                    abrirVentana(new BuscarCamionetaSuv());
+                } else if (rdbDeportivo.isSelected()) {
+                    abrirVentana(new BuscarDeportivo());
+                } else if (rdbPickup.isSelected()) {
+                    abrirVentana(new BuscarPickup());
                 }
+                dispose(); // Cierra la ventana VistaBuscarVehiculo
             }
+
         });
-        btnSiguiente.setBounds(132, 210, 89, 23);
+        btnSiguiente.setBounds(204, 197, 109, 23);
         contentPane.add(btnSiguiente);
 
         cardPanel = new JPanel();
