@@ -23,6 +23,7 @@ public class VistaConsultarEmpleado extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textoCedu;
+	private JButton botonAtras1;
 
 	/**
 	 * Launch the application.
@@ -66,6 +67,23 @@ public class VistaConsultarEmpleado extends JFrame {
 		botonBuscar.setBounds(288, 17, 89, 23);
 		contentPane.add(botonBuscar);
 		
+		botonAtras1 = new JButton("ATRAS");
+		botonAtras1.setBounds(191, 84, 89, 23);
+		contentPane.add(botonAtras1);
+		
+		botonAtras1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				VistaAdministrador a1 = new VistaAdministrador();
+				a1.setVisible(true);
+				
+				
+				
+			}
+		});
+		
+		
 		 botonBuscar.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
 	                int cedula = Integer.parseInt(textoCedu.getText());
@@ -79,6 +97,8 @@ public class VistaConsultarEmpleado extends JFrame {
 	                } else {
 	                    // Empleado en la base de datos
 	                    JOptionPane.showMessageDialog(null, "Empleado Activo.");
+	                    
+	                    System.out.println(a1);
 	                }
 	            }
 	        });
@@ -87,5 +107,4 @@ public class VistaConsultarEmpleado extends JFrame {
 		
 		
 	}
-
 }
