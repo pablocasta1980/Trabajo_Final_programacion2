@@ -1,5 +1,5 @@
 package trabajo_Final;
 
-public enum SensorColision {Seleccionar, SI, NO
+public enum SensorColision {Selec, SI, NO
 
 };
