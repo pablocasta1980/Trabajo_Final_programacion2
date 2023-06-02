@@ -22,6 +22,8 @@ public class VistaMoto extends JFrame {
     private JComboBox<Transmision> cbTransmision;
     private JTextField txtPlaca;
 
+
+
     private ArrayList<Moto> listaMotos;
 
     public VistaMoto() {
@@ -51,6 +53,8 @@ public class VistaMoto extends JFrame {
         cbTransmision = new JComboBox<>(Transmision.values());
         JLabel lblPlaca = new JLabel("Placa:");
         txtPlaca = new JTextField();
+
+
 
         JButton btnGuardar = new JButton("Guardar");
         btnGuardar.addActionListener(new ActionListener() {
@@ -91,6 +95,7 @@ public class VistaMoto extends JFrame {
         int cilindraje = Integer.parseInt(txtCilindraje.getText());
         Combustible tipoCombustible = (Combustible) cbCombustible.getSelectedItem();
         Transmision tipoTransmision = (Transmision) cbTransmision.getSelectedItem();
+
         String placa = txtPlaca.getText();
 
         Moto moto = new Moto(marca, modelo, estadoVehiculo, cambios, velocidadMaxima, cilindraje, tipoCombustible,
@@ -102,6 +107,7 @@ public class VistaMoto extends JFrame {
         System.out.println("Moto guardada exitosamente:");
         System.out.println(moto.toString());
     }
+
 
     public void buscarMoto(String placa) {
         String placaBuscada = placa.toLowerCase();

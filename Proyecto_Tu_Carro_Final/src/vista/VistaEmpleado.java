@@ -56,12 +56,48 @@ public class VistaEmpleado extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("VENDER VEHICULO");
-		btnNewButton_1_1.setBounds(49, 109, 156, 23);
+		btnNewButton_1_1.setBounds(49, 84, 156, 23);
 		contentPane.add(btnNewButton_1_1);
 		
 		JButton btnNewButton_1_1_1 = new JButton("COMPRAR VEHICULO");
-		btnNewButton_1_1_1.setBounds(242, 109, 156, 23);
+		btnNewButton_1_1_1.setBounds(242, 84, 156, 23);
 		contentPane.add(btnNewButton_1_1_1);
+		
+		JButton botonRegVehi = new JButton("REGISTRAR VEHICULO");
+		botonRegVehi.setBounds(49, 130, 156, 23);
+		contentPane.add(botonRegVehi);
+		
+		botonRegVehi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				VistaGuardarVehiculo c = new VistaGuardarVehiculo();
+				c.setVisible(true);	
+				
+				
+			}
+		});
+		
+		
+		
+		JButton botonConsVehic = new JButton("CONSULTAR VEHIC");
+		botonConsVehic.setBounds(242, 130, 156, 23);
+		contentPane.add(botonConsVehic);		
+		
+		
+		botonConsVehic.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				VistaBuscarVehiculo c = new VistaBuscarVehiculo();
+				c.setVisible(true);	
+				
+				
+			}
+		});
+		
+		
+		
 	}
 
 }
