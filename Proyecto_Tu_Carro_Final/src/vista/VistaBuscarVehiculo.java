@@ -108,7 +108,7 @@ public class VistaBuscarVehiculo extends JFrame {
             }
 
         });
-        btnSiguiente.setBounds(204, 197, 109, 23);
+        btnSiguiente.setBounds(179, 161, 109, 23);
         contentPane.add(btnSiguiente);
 
         cardPanel = new JPanel();
@@ -124,6 +124,19 @@ public class VistaBuscarVehiculo extends JFrame {
         buttonGroup.add(rdbMoto);
         buttonGroup.add(rdbPickup);
         buttonGroup.add(rdbSedan);
+        
+        JButton botonAtras = new JButton("ATRAS");
+        botonAtras.setBounds(179, 195, 109, 23);
+        contentPane.add(botonAtras);
+        
+        botonAtras.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                
+                VistaEmpleado a = new VistaEmpleado();
+                a.setVisible(true);
+            }
+        });
     }
 
     private void abrirVentana(JFrame ventana) {

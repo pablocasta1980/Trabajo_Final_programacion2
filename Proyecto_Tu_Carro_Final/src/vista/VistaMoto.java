@@ -37,6 +37,7 @@ public class VistaMoto extends JFrame {
     private JComboBox<Abs> cbAbs;
     private JTextField txtPlaca;
     private JTextField txtFotografias;
+    private JButton btnAtras;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -170,6 +171,19 @@ public class VistaMoto extends JFrame {
         JButton btnAgregar = new JButton("AGREGAR");
         btnAgregar.setBounds(323, 199, 89, 23);
         contentPane.add(btnAgregar);
+        
+        btnAtras = new JButton("ATRAS");
+        btnAtras.setBounds(323, 233, 89, 23);
+        contentPane.add(btnAtras);
+        
+        btnAtras.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                
+                VistaEmpleado a = new VistaEmpleado();
+                a.setVisible(true);
+            }
+        });
 
         btnAgregar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -190,10 +204,15 @@ public class VistaMoto extends JFrame {
         EstadoVehiculo tipoEstado = (EstadoVehiculo) cbEstado.getSelectedItem();
         Transmision tipoTransmision = (Transmision) cbTransmision.getSelectedItem();
         Abs tipoAbs = (Abs) cbAbs.getSelectedItem();
+        
+        
 
-        Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
+       // Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
 
-                tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
+               // tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
+        
+        Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, fotografias, null, 
+        		null, null, null, null);
 
 
         // Agregar la moto al ArrayList en la clase Moto
