@@ -1,5 +1,5 @@
 package trabajo_Final;
 
-public enum AsistentePermanencia {Seleccionar,SI, NO
+public enum AsistentePermanencia {Selec,SI, NO
 
 };

@@ -361,21 +361,21 @@ public class VistaBus extends JFrame {
 		        int numeroEjes = Integer.parseInt(txtNumeroEjes.getText());
 		        int numeroSalidasEmergencia = Integer.parseInt(txtSalidasEmergencia.getText());
 
-				
-							
-				
 		        Bus bus = new Bus(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias, tipoEstado,
 		                tipoAbs, tipoCombustible, tipoTransmision, numeroPasajeros, numeroPuertas, tieneCamara,
 		                tieneSensorColision, tieneSensorTrafico, numeroBolsas, asistentePer, tieneAireAcondicionado,
 		                capacidadMaletero, numeroEjes, numeroSalidasEmergencia);
-				
-				
-				
-				// Guardar el objeto Bus en una lista o realizar alguna acción con los datos
-				// guardados
-				System.out.println(bus);
-			}
+		        
+		        // Guardar el objeto Bus en una lista o realizar alguna acción con los datos guardados
+		        listaBuses.add(bus);
+		        System.out.println(bus);
+		        
+		        JOptionPane.showMessageDialog(null, "Bus guardado correctamente");
+		    }
 		});
+
+			
+		
 		btnGuardar.setBounds(120, 452, 89, 23);
 		contentPane.add(btnGuardar);
 

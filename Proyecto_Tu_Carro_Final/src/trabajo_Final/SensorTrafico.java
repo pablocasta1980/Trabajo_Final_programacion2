@@ -1,5 +1,5 @@
 package trabajo_Final;
 
-public enum SensorTrafico {Seleccionar,SI, NO
+public enum SensorTrafico {Selec,SI, NO
 
 };

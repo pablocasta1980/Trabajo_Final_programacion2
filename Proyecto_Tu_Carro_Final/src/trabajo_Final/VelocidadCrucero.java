@@ -1,4 +1,4 @@
 package trabajo_Final;
 
-public enum VelocidadCrucero {	Seleccione, SI, NO
+public enum VelocidadCrucero {	Selec, SI, NO
 	};
