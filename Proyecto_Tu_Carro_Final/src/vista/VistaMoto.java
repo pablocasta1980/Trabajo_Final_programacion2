@@ -204,10 +204,15 @@ public class VistaMoto extends JFrame {
         EstadoVehiculo tipoEstado = (EstadoVehiculo) cbEstado.getSelectedItem();
         Transmision tipoTransmision = (Transmision) cbTransmision.getSelectedItem();
         Abs tipoAbs = (Abs) cbAbs.getSelectedItem();
+        
+        
 
-        Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
+       // Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, placa, fotografias,
 
-                tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
+               // tipoEstado, tipoAbs, tipoCombustible, tipoTransmision);
+        
+        Moto moto = new Moto(marca, modelo, cambios, velocidadMaxima, cilindraje, fotografias, null, 
+        		null, null, null, null);
 
 
         // Agregar la moto al ArrayList en la clase Moto
